@@ -1,0 +1,904 @@
+2025-06-10T23:55:48.116Z [info] main:  _          _       _____           _ _    _ _   
+2025-06-10T23:55:48.117Z [info] main: | |    ___ | |     |_   _|__   ___ | | | _(_) |_ 
+2025-06-10T23:55:48.117Z [info] main: | |   / _ \| |       | |/ _ \ / _ \| | |/ / | __|
+2025-06-10T23:55:48.118Z [info] main: | |__| (_) | |___    | | (_) | (_) | |   <| | |_ 
+2025-06-10T23:55:48.118Z [info] main: |_____\___/|_____|   |_|\___/ \___/|_|_|\_\_|\__|
+2025-06-10T23:55:48.118Z [info] main: 
+2025-06-10T23:55:48.693Z [info] lpte-svc: Initialized event bus.
+2025-06-10T23:55:48.693Z [info] module-svc: Initializing module service.
+2025-06-10T23:55:49.376Z [info] module-svc: Initialized 19 module(s). Now loading plugins.
+2025-06-10T23:55:49.699Z [info] main: LoL Toolkit started up successfully.
+2025-06-10T23:55:49.377Z [info] module-svc: Loaded 19 plugin(s).
+2025-06-10T23:55:49.700Z [info] module-svc: Plugin status changed: plugin=plugin-prod-clock, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:55:49.700Z [info] module-svc: Plugin status changed: plugin=plugin-database, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:55:49.700Z [info] module-svc: Plugin status changed: plugin=plugin-config, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:55:49.700Z [info] module-svc: Plugin status changed: plugin=module-valorant-state, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:55:49.701Z [info] module-svc: Plugin status changed: plugin=module-valorant-pregame, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:55:49.702Z [info] module-svc: Plugin status changed: plugin=module-league-runes, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:55:49.702Z [info] module-svc: Plugin status changed: plugin=module-league-prm, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:55:49.702Z [info] module-svc: Plugin status changed: plugin=module-league-fearless, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:55:49.702Z [info] module-svc: Plugin status changed: plugin=module-league-end-of-game, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:55:49.702Z [info] module-svc: Plugin status changed: plugin=module-league-champselect-ui, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:55:49.703Z [info] module-svc: Plugin status changed: plugin=module-league-caster-cockpit, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:55:49.703Z [info] module-svc: Plugin status changed: plugin=module-caster, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:55:49.708Z [info] module-svc: Plugin status changed: plugin=plugin-theming, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:55:49.710Z [info] module-svc: Plugin status changed: plugin=plugin-webapi, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:55:49.710Z [info] module-svc: Plugin status changed: plugin=module-league-state, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:55:49.710Z [info] module-svc: Plugin status changed: plugin=module-league-in-game, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:55:49.714Z [info] module-svc: Plugin status changed: plugin=module-teams, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:55:49.745Z [info] module-league-static: Start downloading additional files...
+2025-06-10T23:55:49.929Z [info] module-league-static: Finished downloading additional files
+2025-06-10T23:55:49.930Z [info] module-league-static: start downloading dragontail.tgz
+2025-06-10T23:55:50.455Z [info] module-svc: Plugin status changed: plugin=module-valorant-static, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:56:38.626Z [info] module-league-static: 
+ finish downloading dragontail.tgz
+2025-06-10T23:56:38.626Z [info] module-league-static: Unpacking dragontail.tgz...
+2025-06-10T23:57:17.907Z [info] module-league-static: Finished unpacking dragontail.tgz
+2025-06-10T23:57:18.041Z [info] module-league-static: Moving files to frontend...
+2025-06-10T23:57:18.981Z [info] module-league-static: Deleting versioned folder...
+2025-06-10T23:57:18.981Z [info] module-league-static: Finished moving files to frontend
+2025-06-10T23:57:19.380Z [info] module-league-static: Finished deleting versioned folder
+2025-06-10T23:57:19.381Z [info] module-svc: Plugin status changed: plugin=module-league-static, old=UNAVAILABLE, new=RUNNING
+2025-06-10T23:57:19.382Z [info] plugin-config: config for module-league-static saved!
+2025-06-10T23:57:19.387Z [info] server: Listening for requests on http://localhost:3003
+2025-06-10T23:59:05.730Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-1f1512a4","channelType":"REQUEST"}
+2025-06-10T23:59:10.729Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-1f1512a4, timeout=5000
+2025-06-10T23:59:10.729Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-1f1512a4","channelType":"REQUEST"}
+2025-06-11T00:00:08.963Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku66pombr6o6wx"}
+2025-06-11T00:00:13.959Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-c633815f, timeout=5000
+2025-06-11T00:00:13.959Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-c633815f","channelType":"REQUEST"}
+2025-06-11T00:00:13.961Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku66pombr6o6wx, timeout=5000
+2025-06-11T00:00:13.962Z [info] module-league-state: Failed to load statics
+2025-06-11T00:00:13.962Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku66pombr6o6wx"}
+2025-06-11T00:00:44.952Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-ea127a7a","channelType":"REQUEST"}
+2025-06-11T00:00:49.952Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-ea127a7a, timeout=5000
+2025-06-11T00:00:49.952Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-ea127a7a","channelType":"REQUEST"}
+2025-06-11T00:11:27.918Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-3b1515e2","channelType":"REQUEST"}
+2025-06-11T00:11:32.918Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-3b1515e2, timeout=5000
+2025-06-11T00:11:32.919Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-3b1515e2","channelType":"REQUEST"}
+2025-06-11T00:11:41.055Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku66pombr730xq"}
+2025-06-11T00:11:46.054Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-bb56fa9f, timeout=5000
+2025-06-11T00:11:46.055Z [info] module-league-state: Failed to load statics
+2025-06-11T00:11:46.055Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-bb56fa9f","channelType":"REQUEST"}
+2025-06-11T00:11:46.055Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku66pombr730xq, timeout=5000
+2025-06-11T00:11:46.055Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku66pombr730xq"}
+2025-06-11T00:11:59.628Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku66pombr73f9n"}
+2025-06-11T00:12:00.854Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku66pombr73g7p"}
+2025-06-11T00:12:04.625Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-bb27befa, timeout=5000
+2025-06-11T00:12:04.625Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-bb27befa","channelType":"REQUEST"}
+2025-06-11T00:12:04.627Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku66pombr73f9n, timeout=5000
+2025-06-11T00:12:04.627Z [info] module-league-state: Failed to load statics
+2025-06-11T00:12:04.627Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku66pombr73f9n"}
+2025-06-11T00:12:05.851Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-83358c00, timeout=5000
+2025-06-11T00:12:05.851Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-83358c00","channelType":"REQUEST"}
+2025-06-11T00:12:05.853Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku66pombr73g7p, timeout=5000
+2025-06-11T00:12:05.853Z [info] module-league-state: Failed to load statics
+2025-06-11T00:12:05.853Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku66pombr73g7p"}
+2025-06-11T00:12:16.354Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku66pombr73s68"}
+2025-06-11T00:12:21.351Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-3998c0f8, timeout=5000
+2025-06-11T00:12:21.351Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-3998c0f8","channelType":"REQUEST"}
+2025-06-11T00:12:21.352Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku66pombr73s68, timeout=5000
+2025-06-11T00:12:21.352Z [info] module-league-state: Failed to load statics
+2025-06-11T00:12:21.352Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku66pombr73s68"}
+2025-06-11T00:12:29.704Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku66pombr742h2"}
+2025-06-11T00:12:34.700Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-def9753, timeout=5000
+2025-06-11T00:12:34.700Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-def9753","channelType":"REQUEST"}
+2025-06-11T00:12:34.703Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku66pombr742h2, timeout=5000
+2025-06-11T00:12:34.703Z [info] module-league-state: Failed to load statics
+2025-06-11T00:12:34.703Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku66pombr742h2"}
+2025-06-11T00:13:10.559Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku66pombr74xzy"}
+2025-06-11T00:13:15.555Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-4882afac, timeout=5000
+2025-06-11T00:13:15.555Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-4882afac","channelType":"REQUEST"}
+2025-06-11T00:13:15.558Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku66pombr74xzy, timeout=5000
+2025-06-11T00:13:15.558Z [info] module-league-state: Failed to load statics
+2025-06-11T00:13:15.558Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku66pombr74xzy"}
+2025-09-21T08:12:32.748Z [info] main:  _          _       _____           _ _    _ _   
+2025-09-21T08:12:32.749Z [info] main: | |    ___ | |     |_   _|__   ___ | | | _(_) |_ 
+2025-09-21T08:12:32.749Z [info] main: | |   / _ \| |       | |/ _ \ / _ \| | |/ / | __|
+2025-09-21T08:12:32.749Z [info] main: | |__| (_) | |___    | | (_) | (_) | |   <| | |_ 
+2025-09-21T08:12:32.750Z [info] main: |_____\___/|_____|   |_|\___/ \___/|_|_|\_\_|\__|
+2025-09-21T08:12:32.750Z [info] main: 
+2025-09-21T08:12:33.160Z [info] main: ==================================================
+2025-09-21T08:12:33.161Z [info] lpte-svc: Initialized event bus.
+2025-09-21T08:12:33.161Z [info] module-svc: Initializing module service.
+2025-09-21T08:12:33.161Z [info] main: There is a new version available: v1.13.2
+2025-09-21T08:12:33.161Z [info] main: ==================================================
+2025-09-21T08:12:33.161Z [info] main: 
+2025-09-21T08:12:35.199Z [info] module-svc: Initialized 19 module(s). Now loading plugins.
+2025-09-21T08:12:35.742Z [info] main: LoL Toolkit started up successfully.
+2025-09-21T08:12:35.199Z [info] module-svc: Loaded 19 plugin(s).
+2025-09-21T08:12:35.743Z [info] module-svc: Plugin status changed: plugin=plugin-prod-clock, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:12:35.743Z [info] module-svc: Plugin status changed: plugin=plugin-database, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:12:35.744Z [info] module-svc: Plugin status changed: plugin=plugin-config, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:12:35.744Z [info] module-svc: Plugin status changed: plugin=module-valorant-state, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:12:35.744Z [info] module-svc: Plugin status changed: plugin=module-valorant-pregame, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:12:35.745Z [info] module-svc: Plugin status changed: plugin=module-league-runes, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:12:35.745Z [info] module-svc: Plugin status changed: plugin=module-league-prm, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:12:35.745Z [info] module-svc: Plugin status changed: plugin=module-league-fearless, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:12:35.745Z [info] module-svc: Plugin status changed: plugin=module-league-end-of-game, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:12:35.746Z [info] module-svc: Plugin status changed: plugin=module-league-champselect-ui, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:12:35.746Z [info] module-svc: Plugin status changed: plugin=module-league-caster-cockpit, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:12:35.747Z [info] module-svc: Plugin status changed: plugin=module-caster, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:12:35.751Z [info] module-svc: Plugin status changed: plugin=plugin-theming, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:12:35.752Z [info] module-svc: Plugin status changed: plugin=plugin-webapi, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:12:35.753Z [info] module-svc: Plugin status changed: plugin=module-league-state, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:12:35.753Z [info] module-svc: Plugin status changed: plugin=module-league-in-game, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:12:35.755Z [info] module-svc: Plugin status changed: plugin=module-teams, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:12:35.846Z [info] module-svc: Plugin status changed: plugin=module-valorant-static, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:12:39.426Z [info] module-league-static: Start downloading additional files...
+2025-09-21T08:12:39.741Z [info] module-league-static: Finished downloading additional files
+2025-09-21T08:12:39.741Z [info] module-league-static: start downloading dragontail.tgz
+2025-09-21T08:12:47.435Z [info] module-league-static: 
+ finish downloading dragontail.tgz
+2025-09-21T08:12:47.436Z [info] module-league-static: Unpacking dragontail.tgz...
+2025-09-21T08:13:42.931Z [info] module-league-static: Finished unpacking dragontail.tgz
+2025-09-21T08:13:43.100Z [info] module-league-static: Moving files to frontend...
+2025-09-21T08:13:45.958Z [info] module-league-static: Deleting versioned folder...
+2025-09-21T08:13:45.959Z [info] module-league-static: Finished moving files to frontend
+2025-09-21T08:13:46.433Z [info] module-league-static: Finished deleting versioned folder
+2025-09-21T08:13:46.434Z [info] module-svc: Plugin status changed: plugin=module-league-static, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:13:46.436Z [info] plugin-config: config for module-league-static saved!
+2025-09-21T08:13:46.441Z [info] server: Listening for requests on http://localhost:3003
+2025-09-21T08:15:20.499Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-a7defb84","channelType":"REQUEST"}
+2025-09-21T08:15:25.498Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-a7defb84, timeout=5000
+2025-09-21T08:15:25.498Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-a7defb84","channelType":"REQUEST"}
+2025-09-21T08:26:09.912Z [info] module-svc: module-league-end-of-game was successfully installed
+2025-09-21T08:26:09.912Z [info] module-svc: plugin module-league-end-of-game was updated
+2025-09-21T08:26:09.912Z [info] module-svc: Plugin status changed: plugin=module-league-end-of-game, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:31:09.615Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfu8tn"}
+2025-09-21T08:31:14.612Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftfu8tn, timeout=5000
+2025-09-21T08:31:14.612Z [info] module-league-state: Failed to load statics
+2025-09-21T08:31:14.612Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfu8tn"}
+2025-09-21T08:31:38.695Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-ff7e9595","channelType":"REQUEST"}
+2025-09-21T08:31:43.693Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-ff7e9595, timeout=5000
+2025-09-21T08:31:43.693Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-ff7e9595","channelType":"REQUEST"}
+2025-09-21T08:32:17.052Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfvouz"}
+2025-09-21T08:32:22.053Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftfvouz, timeout=5000
+2025-09-21T08:32:22.053Z [info] module-league-state: Failed to load statics
+2025-09-21T08:32:22.053Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfvouz"}
+2025-09-21T08:33:16.271Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-e6762cd2","channelType":"REQUEST"}
+2025-09-21T08:33:21.269Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-e6762cd2, timeout=5000
+2025-09-21T08:33:21.270Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-e6762cd2","channelType":"REQUEST"}
+2025-09-21T08:33:26.715Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfx6m1"}
+2025-09-21T08:33:31.711Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-d903e8a9, timeout=5000
+2025-09-21T08:33:31.712Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-d903e8a9","channelType":"REQUEST"}
+2025-09-21T08:33:31.715Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftfx6m1, timeout=5000
+2025-09-21T08:33:31.715Z [info] module-league-state: Failed to load statics
+2025-09-21T08:33:31.715Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfx6m1"}
+2025-09-21T08:33:32.012Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfxap7"}
+2025-09-21T08:33:37.010Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-dfa0ebc0, timeout=5000
+2025-09-21T08:33:37.011Z [info] module-league-state: Failed to load statics
+2025-09-21T08:33:37.011Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-dfa0ebc0","channelType":"REQUEST"}
+2025-09-21T08:33:37.011Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftfxap7, timeout=5000
+2025-09-21T08:33:37.011Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfxap7"}
+2025-09-21T08:33:38.814Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfxfy5"}
+2025-09-21T08:33:41.655Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfxi52"}
+2025-09-21T08:33:43.813Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-9084646, timeout=5000
+2025-09-21T08:33:43.814Z [info] module-league-state: Failed to load statics
+2025-09-21T08:33:43.814Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-9084646","channelType":"REQUEST"}
+2025-09-21T08:33:43.814Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftfxfy5, timeout=5000
+2025-09-21T08:33:43.814Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfxfy5"}
+2025-09-21T08:33:46.652Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-bc9996fe, timeout=5000
+2025-09-21T08:33:46.652Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-bc9996fe","channelType":"REQUEST"}
+2025-09-21T08:33:46.653Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftfxi52, timeout=5000
+2025-09-21T08:33:46.654Z [info] module-league-state: Failed to load statics
+2025-09-21T08:33:46.653Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfxi52"}
+2025-09-21T08:33:47.117Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfxmcs"}
+2025-09-21T08:33:51.674Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfxpvb"}
+2025-09-21T08:33:52.115Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-5b6259a8, timeout=5000
+2025-09-21T08:33:52.115Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-5b6259a8","channelType":"REQUEST"}
+2025-09-21T08:33:52.116Z [info] module-league-state: Failed to load statics
+2025-09-21T08:33:52.115Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftfxmcs, timeout=5000
+2025-09-21T08:33:52.115Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfxmcs"}
+2025-09-21T08:33:56.669Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-23c7dc5e, timeout=5000
+2025-09-21T08:33:56.670Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-23c7dc5e","channelType":"REQUEST"}
+2025-09-21T08:33:56.672Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftfxpvb, timeout=5000
+2025-09-21T08:33:56.672Z [info] module-league-state: Failed to load statics
+2025-09-21T08:33:56.672Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfxpvb"}
+2025-09-21T08:33:57.935Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfxupa"}
+2025-09-21T08:34:01.584Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfxxin"}
+2025-09-21T08:34:02.932Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-d8f93805, timeout=5000
+2025-09-21T08:34:02.933Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-d8f93805","channelType":"REQUEST"}
+2025-09-21T08:34:02.934Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftfxupa, timeout=5000
+2025-09-21T08:34:02.934Z [info] module-league-state: Failed to load statics
+2025-09-21T08:34:02.934Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfxupa"}
+2025-09-21T08:34:06.580Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-bc630a6a, timeout=5000
+2025-09-21T08:34:06.581Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-bc630a6a","channelType":"REQUEST"}
+2025-09-21T08:34:06.584Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftfxxin, timeout=5000
+2025-09-21T08:34:06.585Z [info] module-league-state: Failed to load statics
+2025-09-21T08:34:06.585Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfxxin"}
+2025-09-21T08:34:32.939Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfylpl"}
+2025-09-21T08:34:37.937Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-5b34e11, timeout=5000
+2025-09-21T08:34:37.937Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-5b34e11","channelType":"REQUEST"}
+2025-09-21T08:34:37.938Z [info] module-league-state: Failed to load statics
+2025-09-21T08:34:37.937Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftfylpl, timeout=5000
+2025-09-21T08:34:37.937Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfylpl"}
+2025-09-21T08:34:45.759Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfyvlp"}
+2025-09-21T08:34:50.757Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-f7dc022, timeout=5000
+2025-09-21T08:34:50.757Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-f7dc022","channelType":"REQUEST"}
+2025-09-21T08:34:50.757Z [info] module-league-state: Failed to load statics
+2025-09-21T08:34:50.757Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftfyvlp, timeout=5000
+2025-09-21T08:34:50.757Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftfyvlp"}
+2025-09-21T08:35:55.198Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-1b3a13d2","channelType":"REQUEST"}
+2025-09-21T08:36:00.199Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-1b3a13d2, timeout=5000
+2025-09-21T08:36:00.199Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-1b3a13d2","channelType":"REQUEST"}
+2025-09-21T08:36:00.332Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftg0h57"}
+2025-09-21T08:36:01.436Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftg0hzv"}
+2025-09-21T08:36:01.588Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftg0i42"}
+2025-09-21T08:36:02.458Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-4ebfb8c3","channelType":"REQUEST"}
+2025-09-21T08:36:04.068Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftg0k0z"}
+2025-09-21T08:36:05.331Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-788fa89e, timeout=5000
+2025-09-21T08:36:05.331Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-788fa89e","channelType":"REQUEST"}
+2025-09-21T08:36:05.331Z [info] module-league-state: Failed to load statics
+2025-09-21T08:36:05.331Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftg0h57, timeout=5000
+2025-09-21T08:36:05.331Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftg0h57"}
+2025-09-21T08:36:06.434Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-ab1f2ec3, timeout=5000
+2025-09-21T08:36:06.435Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-ab1f2ec3","channelType":"REQUEST"}
+2025-09-21T08:36:06.435Z [info] module-league-state: Failed to load statics
+2025-09-21T08:36:06.435Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftg0hzv, timeout=5000
+2025-09-21T08:36:06.435Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftg0hzv"}
+2025-09-21T08:36:06.585Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-f0fcc3ab, timeout=5000
+2025-09-21T08:36:06.586Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-f0fcc3ab","channelType":"REQUEST"}
+2025-09-21T08:36:06.586Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftg0i42, timeout=5000
+2025-09-21T08:36:06.587Z [info] module-league-state: Failed to load statics
+2025-09-21T08:36:06.587Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftg0i42"}
+2025-09-21T08:36:06.861Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftg0m6k"}
+2025-09-21T08:36:07.458Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-4ebfb8c3, timeout=5000
+2025-09-21T08:36:07.459Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-4ebfb8c3","channelType":"REQUEST"}
+2025-09-21T08:36:09.064Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-a5382cdd, timeout=5000
+2025-09-21T08:36:09.064Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-a5382cdd","channelType":"REQUEST"}
+2025-09-21T08:36:09.067Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftg0k0z, timeout=5000
+2025-09-21T08:36:09.067Z [info] module-league-state: Failed to load statics
+2025-09-21T08:36:09.067Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftg0k0z"}
+2025-09-21T08:36:11.664Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftg0pvx"}
+2025-09-21T08:36:11.859Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-7f8a2d86, timeout=5000
+2025-09-21T08:36:11.859Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-7f8a2d86","channelType":"REQUEST"}
+2025-09-21T08:36:11.860Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftg0m6k, timeout=5000
+2025-09-21T08:36:11.860Z [info] module-league-state: Failed to load statics
+2025-09-21T08:36:11.860Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftg0m6k"}
+2025-09-21T08:36:13.890Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftg0rls"}
+2025-09-21T08:36:16.661Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-56326524, timeout=5000
+2025-09-21T08:36:16.662Z [info] module-league-state: Failed to load statics
+2025-09-21T08:36:16.662Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-56326524","channelType":"REQUEST"}
+2025-09-21T08:36:16.662Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftg0pvx, timeout=5000
+2025-09-21T08:36:16.662Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftg0pvx"}
+2025-09-21T08:36:18.886Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-4c41cb10, timeout=5000
+2025-09-21T08:36:18.886Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-4c41cb10","channelType":"REQUEST"}
+2025-09-21T08:36:18.888Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku64u0mftg0rls, timeout=5000
+2025-09-21T08:36:18.888Z [info] module-league-state: Failed to load statics
+2025-09-21T08:36:18.888Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.13.1","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku64u0mftg0rls"}
+2025-09-21T08:36:35.449Z [info] module-svc: module-league-static was successfully installed
+2025-09-21T08:36:35.449Z [info] module-svc: plugin module-league-static was updated
+2025-09-21T08:36:35.487Z [info] module-svc: Plugin status changed: plugin=module-league-static, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:36:42.713Z [info] module-svc: module-league-state was successfully installed
+2025-09-21T08:36:42.713Z [info] module-svc: plugin module-league-state was updated
+2025-09-21T08:36:42.718Z [info] module-svc: Plugin status changed: plugin=module-league-state, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:36:44.737Z [info] module-svc: module-league-runes was successfully installed
+2025-09-21T08:36:44.737Z [info] module-svc: plugin module-league-runes was updated
+2025-09-21T08:36:44.739Z [info] module-svc: Plugin status changed: plugin=module-league-runes, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:36:46.996Z [info] module-svc: module-league-prm was successfully installed
+2025-09-21T08:36:46.996Z [info] module-svc: plugin module-league-prm was updated
+2025-09-21T08:36:46.996Z [info] module-svc: Plugin status changed: plugin=module-league-prm, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:36:48.849Z [info] module-svc: module-league-in-game was successfully installed
+2025-09-21T08:36:48.849Z [info] module-svc: plugin module-league-in-game was updated
+2025-09-21T08:36:48.853Z [info] module-svc: Plugin status changed: plugin=module-league-in-game, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:36:50.289Z [info] module-svc: module-league-fearless was successfully installed
+2025-09-21T08:36:50.289Z [info] module-svc: plugin module-league-fearless was updated
+2025-09-21T08:36:50.289Z [info] module-svc: Plugin status changed: plugin=module-league-fearless, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:36:52.955Z [info] module-svc: module-league-champselect-ui was successfully installed
+2025-09-21T08:36:52.955Z [info] module-svc: plugin module-league-champselect-ui was updated
+2025-09-21T08:36:52.955Z [info] module-svc: Plugin status changed: plugin=module-league-champselect-ui, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:36:56.256Z [info] module-svc: module-league-caster-cockpit was successfully installed
+2025-09-21T08:36:56.256Z [info] module-svc: plugin module-league-caster-cockpit was updated
+2025-09-21T08:36:56.257Z [info] module-svc: Plugin status changed: plugin=module-league-caster-cockpit, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:37:01.613Z [info] module-svc: plugin-webapi was successfully installed
+2025-09-21T08:37:01.613Z [info] module-svc: plugin plugin-webapi was updated
+2025-09-21T08:37:01.617Z [info] module-svc: Plugin status changed: plugin=plugin-webapi, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:37:03.291Z [info] module-svc: plugin-theming was successfully installed
+2025-09-21T08:37:03.291Z [info] module-svc: plugin plugin-theming was updated
+2025-09-21T08:37:03.292Z [info] module-svc: Plugin status changed: plugin=plugin-theming, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:37:04.803Z [info] module-svc: plugin-prod-clock was successfully installed
+2025-09-21T08:37:04.803Z [info] module-svc: plugin plugin-prod-clock was updated
+2025-09-21T08:37:04.803Z [info] module-svc: Plugin status changed: plugin=plugin-prod-clock, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:37:06.477Z [info] module-svc: plugin-database was successfully installed
+2025-09-21T08:37:06.477Z [info] module-svc: plugin plugin-database was updated
+2025-09-21T08:37:06.477Z [info] module-svc: Plugin status changed: plugin=plugin-database, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:37:08.659Z [info] module-svc: plugin-config was successfully installed
+2025-09-21T08:37:08.659Z [info] module-svc: plugin plugin-config was updated
+2025-09-21T08:37:08.660Z [info] module-svc: Plugin status changed: plugin=plugin-config, old=UNAVAILABLE, new=RUNNING
+2025-09-21T08:38:31.512Z [info] plugin-webapi: Fetching match data for matchid=NA1_5297969351
+2025-09-21T08:38:31.517Z [info] plugin-webapi: Fetching match data for matchid=NA1_5297969351
+2025-09-21T08:38:31.518Z [info] plugin-webapi: Fetching match data for matchid=NA1_5297969351
+2025-09-21T08:38:31.518Z [info] plugin-webapi: Fetching match data for matchid=NA1_5297969351
+2025-09-21T08:38:31.953Z [info] plugin-webapi: Fetched match for matchId=NA1_5297969351, gameId=5297969351
+2025-09-21T08:38:31.970Z [info] plugin-webapi: Fetched match for matchId=NA1_5297969351, gameId=5297969351
+2025-09-21T08:38:31.989Z [info] plugin-webapi: Fetched match for matchId=NA1_5297969351, gameId=5297969351
+2025-09-21T08:38:32.079Z [info] plugin-webapi: Fetched match for matchId=NA1_5297969351, gameId=5297969351
+2025-09-21T08:38:38.395Z [info] plugin-webapi: Fetching match data for matchid=NA1_undefined
+2025-09-21T08:38:38.398Z [info] plugin-webapi: Fetching match data for matchid=NA1_undefined
+2025-09-21T08:38:38.399Z [info] plugin-webapi: Fetching match data for matchid=NA1_undefined
+2025-09-21T08:38:38.400Z [info] plugin-webapi: Fetching match data for matchid=NA1_undefined
+2025-09-21T08:38:38.483Z [error] plugin-webapi: Failed to get match information for matchId=NA1_undefined. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-21T08:38:38.483Z [error] plugin-webapi: Failed to get match information for matchId=NA1_undefined. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-21T08:38:38.484Z [error] module-league-state: Loading match failed for gameId=undefined
+2025-09-21T08:38:38.485Z [error] module-league-state: Loading match failed for gameId=undefined
+2025-09-21T08:38:38.545Z [error] plugin-webapi: Failed to get match information for matchId=NA1_undefined. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-21T08:38:38.557Z [error] plugin-webapi: Failed to get match information for matchId=NA1_undefined. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-21T08:39:50.297Z [info] plugin-webapi: Fetching match data for matchid=NA1_undefined
+2025-09-21T08:39:50.299Z [info] plugin-webapi: Fetching match data for matchid=NA1_undefined
+2025-09-21T08:39:50.300Z [info] plugin-webapi: Fetching match data for matchid=NA1_undefined
+2025-09-21T08:39:50.300Z [info] plugin-webapi: Fetching match data for matchid=NA1_undefined
+2025-09-21T08:39:50.382Z [error] plugin-webapi: Failed to get match information for matchId=NA1_undefined. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-21T08:39:50.383Z [error] module-league-state: Loading match failed for gameId=undefined
+2025-09-21T08:39:50.384Z [error] plugin-webapi: Failed to get match information for matchId=NA1_undefined. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-21T08:39:50.385Z [error] module-league-state: Loading match failed for gameId=undefined
+2025-09-21T08:39:50.386Z [error] plugin-webapi: Failed to get match information for matchId=NA1_undefined. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-21T08:39:50.388Z [error] plugin-webapi: Failed to get match information for matchId=NA1_undefined. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-21T08:39:53.608Z [info] plugin-webapi: Fetching match data for matchid=NA1_undefined
+2025-09-21T08:39:53.608Z [info] plugin-webapi: Fetching match data for matchid=NA1_undefined
+2025-09-21T08:39:53.609Z [info] plugin-webapi: Fetching match data for matchid=NA1_undefined
+2025-09-21T08:39:53.610Z [info] plugin-webapi: Fetching match data for matchid=NA1_undefined
+2025-09-21T08:39:53.667Z [error] plugin-webapi: Failed to get match information for matchId=NA1_undefined. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-21T08:39:53.668Z [error] plugin-webapi: Failed to get match information for matchId=NA1_undefined. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-21T08:39:53.669Z [error] module-league-state: Loading match failed for gameId=undefined
+2025-09-21T08:39:53.669Z [error] module-league-state: Loading match failed for gameId=undefined
+2025-09-21T08:39:53.672Z [error] plugin-webapi: Failed to get match information for matchId=NA1_undefined. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-21T08:39:53.680Z [error] plugin-webapi: Failed to get match information for matchId=NA1_undefined. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-21T08:40:02.673Z [info] plugin-webapi: Fetching match data for matchid=NA1_5297969351
+2025-09-21T08:40:02.675Z [info] plugin-webapi: Fetching match data for matchid=NA1_5297969351
+2025-09-21T08:40:02.676Z [info] plugin-webapi: Fetching match data for matchid=NA1_5297969351
+2025-09-21T08:40:02.676Z [info] plugin-webapi: Fetching match data for matchid=NA1_5297969351
+2025-09-21T08:40:03.029Z [info] plugin-webapi: Fetched match for matchId=NA1_5297969351, gameId=5297969351
+2025-09-21T08:40:03.072Z [info] plugin-webapi: Fetched match for matchId=NA1_5297969351, gameId=5297969351
+2025-09-21T08:40:03.094Z [info] plugin-webapi: Fetched match for matchId=NA1_5297969351, gameId=5297969351
+2025-09-21T08:40:03.122Z [info] plugin-webapi: Fetched match for matchId=NA1_5297969351, gameId=5297969351
+2025-09-21T08:40:06.709Z [info] plugin-webapi: Fetching match data for matchid=NA1_undefined
+2025-09-21T08:40:06.710Z [info] plugin-webapi: Fetching match data for matchid=NA1_undefined
+2025-09-21T08:40:06.710Z [info] plugin-webapi: Fetching match data for matchid=NA1_undefined
+2025-09-21T08:40:06.711Z [info] plugin-webapi: Fetching match data for matchid=NA1_undefined
+2025-09-21T08:40:06.769Z [error] plugin-webapi: Failed to get match information for matchId=NA1_undefined. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-21T08:40:06.770Z [error] module-league-state: Loading match failed for gameId=undefined
+2025-09-21T08:40:06.771Z [error] plugin-webapi: Failed to get match information for matchId=NA1_undefined. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-21T08:40:06.772Z [error] module-league-state: Loading match failed for gameId=undefined
+2025-09-21T08:40:06.773Z [error] plugin-webapi: Failed to get match information for matchId=NA1_undefined. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-21T08:40:06.778Z [error] plugin-webapi: Failed to get match information for matchId=NA1_undefined. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-27T09:51:22.434Z [info] main:  _          _       _____           _ _    _ _   
+2025-09-27T09:51:22.436Z [info] main: | |    ___ | |     |_   _|__   ___ | | | _(_) |_ 
+2025-09-27T09:51:22.436Z [info] main: | |   / _ \| |       | |/ _ \ / _ \| | |/ / | __|
+2025-09-27T09:51:22.436Z [info] main: | |__| (_) | |___    | | (_) | (_) | |   <| | |_ 
+2025-09-27T09:51:22.436Z [info] main: |_____\___/|_____|   |_|\___/ \___/|_|_|\_\_|\__|
+2025-09-27T09:51:22.437Z [info] main: 
+2025-09-27T09:51:22.833Z [info] main: ==================================================
+2025-09-27T09:51:22.834Z [info] lpte-svc: Initialized event bus.
+2025-09-27T09:51:22.834Z [info] module-svc: Initializing module service.
+2025-09-27T09:51:22.833Z [info] main: There is a new version available: v1.13.2
+2025-09-27T09:51:22.834Z [info] main: ==================================================
+2025-09-27T09:51:22.834Z [info] main: 
+2025-09-27T09:51:25.418Z [info] module-svc: Initialized 19 module(s). Now loading plugins.
+2025-09-27T09:51:25.960Z [info] main: LoL Toolkit started up successfully.
+2025-09-27T09:51:25.418Z [info] module-svc: Loaded 19 plugin(s).
+2025-09-27T09:51:25.961Z [info] module-svc: Plugin status changed: plugin=plugin-prod-clock, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:51:25.961Z [info] module-svc: Plugin status changed: plugin=plugin-database, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:51:25.961Z [info] module-svc: Plugin status changed: plugin=plugin-config, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:51:25.961Z [info] module-svc: Plugin status changed: plugin=module-valorant-state, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:51:25.961Z [info] module-svc: Plugin status changed: plugin=module-valorant-pregame, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:51:25.962Z [info] module-svc: Plugin status changed: plugin=module-league-runes, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:51:25.962Z [info] module-svc: Plugin status changed: plugin=module-league-prm, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:51:25.962Z [info] module-svc: Plugin status changed: plugin=module-league-fearless, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:51:25.962Z [info] module-svc: Plugin status changed: plugin=module-league-end-of-game, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:51:25.963Z [info] module-svc: Plugin status changed: plugin=module-league-champselect-ui, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:51:25.963Z [info] module-svc: Plugin status changed: plugin=module-league-caster-cockpit, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:51:25.963Z [info] module-svc: Plugin status changed: plugin=module-caster, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:51:25.968Z [info] module-svc: Plugin status changed: plugin=plugin-webapi, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:51:25.968Z [info] module-svc: Plugin status changed: plugin=module-league-state, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:51:25.969Z [info] module-svc: Plugin status changed: plugin=module-league-in-game, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:51:25.970Z [info] module-svc: Plugin status changed: plugin=plugin-theming, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:51:25.971Z [warn] plugin-theming: Failed to load theme in C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\themes\New Theme Cannot find module 'C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\themes\New Theme\theme.json'
+Require stack:
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\dist\plugin.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\modules\Module.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\modules\ModuleService.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\controller\modules.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\controller\index.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\server.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\app.js
+2025-09-27T09:51:25.971Z [info] module-svc: Plugin status changed: plugin=module-teams, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:51:26.039Z [info] module-svc: Plugin status changed: plugin=module-valorant-static, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:51:35.609Z [info] module-league-static: Start downloading additional files...
+2025-09-27T09:51:36.131Z [info] module-league-static: Finished downloading additional files
+2025-09-27T09:51:36.131Z [info] module-league-static: start downloading dragontail.tgz
+2025-09-27T09:51:43.761Z [info] module-league-static: 
+ finish downloading dragontail.tgz
+2025-09-27T09:51:43.762Z [info] module-league-static: Unpacking dragontail.tgz...
+2025-09-27T09:52:32.280Z [info] module-league-static: Finished unpacking dragontail.tgz
+2025-09-27T09:52:32.432Z [info] module-league-static: Moving files to frontend...
+2025-09-27T09:52:34.407Z [info] module-league-static: Deleting versioned folder...
+2025-09-27T09:52:34.408Z [info] module-league-static: Finished moving files to frontend
+2025-09-27T09:52:34.849Z [info] module-league-static: Finished deleting versioned folder
+2025-09-27T09:52:34.850Z [info] module-svc: Plugin status changed: plugin=module-league-static, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:52:34.852Z [info] plugin-config: config for module-league-static saved!
+2025-09-27T09:52:34.856Z [info] server: Listening for requests on http://localhost:3003
+2025-09-27T09:52:59.451Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-in-game","type":"request","version":1,"reply":"request-400668e6","channelType":"REQUEST"}
+2025-09-27T09:53:04.449Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-400668e6, timeout=5000
+2025-09-27T09:53:04.449Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-in-game","type":"request","version":1,"reply":"request-400668e6","channelType":"REQUEST"}
+2025-09-27T09:53:22.526Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-a81b3662","channelType":"REQUEST"}
+2025-09-27T09:53:27.373Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6e0wmg23f6tn"}
+2025-09-27T09:53:27.524Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-a81b3662, timeout=5000
+2025-09-27T09:53:27.524Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-a81b3662","channelType":"REQUEST"}
+2025-09-27T09:53:32.369Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-9beb72d4, timeout=5000
+2025-09-27T09:53:32.369Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-9beb72d4","channelType":"REQUEST"}
+2025-09-27T09:53:32.371Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku6e0wmg23f6tn, timeout=5000
+2025-09-27T09:53:32.371Z [info] module-league-state: Failed to load statics
+2025-09-27T09:53:32.371Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6e0wmg23f6tn"}
+2025-09-27T09:53:33.172Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6e0wmg23fbap"}
+2025-09-27T09:53:38.170Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-a88120bf, timeout=5000
+2025-09-27T09:53:38.171Z [info] module-league-state: Failed to load statics
+2025-09-27T09:53:38.170Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-a88120bf","channelType":"REQUEST"}
+2025-09-27T09:53:38.170Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku6e0wmg23fbap, timeout=5000
+2025-09-27T09:53:38.171Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6e0wmg23fbap"}
+2025-09-27T09:53:38.933Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6e0wmg23ffqr"}
+2025-09-27T09:53:43.931Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-bf7a739e, timeout=5000
+2025-09-27T09:53:43.931Z [info] module-league-state: Failed to load statics
+2025-09-27T09:53:43.931Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-bf7a739e","channelType":"REQUEST"}
+2025-09-27T09:53:43.931Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku6e0wmg23ffqr, timeout=5000
+2025-09-27T09:53:43.931Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6e0wmg23ffqr"}
+2025-09-27T09:53:44.783Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6e0wmg23fk9a"}
+2025-09-27T09:53:49.780Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-4d3c6fe8, timeout=5000
+2025-09-27T09:53:49.780Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-4d3c6fe8","channelType":"REQUEST"}
+2025-09-27T09:53:49.784Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku6e0wmg23fk9a, timeout=5000
+2025-09-27T09:53:49.784Z [info] module-league-state: Failed to load statics
+2025-09-27T09:53:49.784Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6e0wmg23fk9a"}
+2025-09-27T09:54:17.700Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6e0wmg23g9nn"}
+2025-09-27T09:54:22.699Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-1856f5f0, timeout=5000
+2025-09-27T09:54:22.700Z [info] module-league-state: Failed to load statics
+2025-09-27T09:54:22.700Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-1856f5f0","channelType":"REQUEST"}
+2025-09-27T09:54:22.700Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku6e0wmg23g9nn, timeout=5000
+2025-09-27T09:54:22.700Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6e0wmg23g9nn"}
+2025-09-27T09:54:27.443Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6e0wmg23gh69"}
+2025-09-27T09:54:31.547Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6e0wmg23gkc9"}
+2025-09-27T09:54:32.441Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-2460b4c7, timeout=5000
+2025-09-27T09:54:32.441Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-2460b4c7","channelType":"REQUEST"}
+2025-09-27T09:54:32.442Z [info] module-league-state: Failed to load statics
+2025-09-27T09:54:32.441Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku6e0wmg23gh69, timeout=5000
+2025-09-27T09:54:32.441Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6e0wmg23gh69"}
+2025-09-27T09:54:36.545Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-fe91e8cb, timeout=5000
+2025-09-27T09:54:36.545Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-fe91e8cb","channelType":"REQUEST"}
+2025-09-27T09:54:36.546Z [info] module-league-state: Failed to load statics
+2025-09-27T09:54:36.545Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku6e0wmg23gkc9, timeout=5000
+2025-09-27T09:54:36.546Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6e0wmg23gkc9"}
+2025-09-27T09:54:43.971Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-251d9613","channelType":"REQUEST"}
+2025-09-27T09:54:45.592Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-b06b3e32","channelType":"REQUEST"}
+2025-09-27T09:54:46.190Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-b1e35d1a","channelType":"REQUEST"}
+2025-09-27T09:54:48.970Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-251d9613, timeout=5000
+2025-09-27T09:54:48.970Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-251d9613","channelType":"REQUEST"}
+2025-09-27T09:54:50.590Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-b06b3e32, timeout=5000
+2025-09-27T09:54:50.590Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-b06b3e32","channelType":"REQUEST"}
+2025-09-27T09:54:51.189Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-b1e35d1a, timeout=5000
+2025-09-27T09:54:51.189Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-b1e35d1a","channelType":"REQUEST"}
+2025-09-27T09:54:54.642Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-90eea050","channelType":"REQUEST"}
+2025-09-27T09:54:59.640Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-90eea050, timeout=5000
+2025-09-27T09:54:59.641Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-90eea050","channelType":"REQUEST"}
+2025-09-27T09:56:01.090Z [info] main:  _          _       _____           _ _    _ _   
+2025-09-27T09:56:01.091Z [info] main: | |    ___ | |     |_   _|__   ___ | | | _(_) |_ 
+2025-09-27T09:56:01.092Z [info] main: | |   / _ \| |       | |/ _ \ / _ \| | |/ / | __|
+2025-09-27T09:56:01.092Z [info] main: | |__| (_) | |___    | | (_) | (_) | |   <| | |_ 
+2025-09-27T09:56:01.092Z [info] main: |_____\___/|_____|   |_|\___/ \___/|_|_|\_\_|\__|
+2025-09-27T09:56:01.092Z [info] main: 
+2025-09-27T09:56:01.173Z [info] main: ==================================================
+2025-09-27T09:56:01.174Z [info] lpte-svc: Initialized event bus.
+2025-09-27T09:56:01.174Z [info] module-svc: Initializing module service.
+2025-09-27T09:56:01.173Z [info] main: There is a new version available: v1.13.2
+2025-09-27T09:56:01.173Z [info] main: ==================================================
+2025-09-27T09:56:01.174Z [info] main: 
+2025-09-27T09:56:01.604Z [info] module-svc: Initialized 19 module(s). Now loading plugins.
+2025-09-27T09:56:01.945Z [info] main: LoL Toolkit started up successfully.
+2025-09-27T09:56:01.605Z [info] module-svc: Loaded 19 plugin(s).
+2025-09-27T09:56:01.945Z [info] module-svc: Plugin status changed: plugin=plugin-prod-clock, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:01.946Z [info] module-svc: Plugin status changed: plugin=plugin-database, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:01.946Z [info] module-svc: Plugin status changed: plugin=plugin-config, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:01.946Z [info] module-svc: Plugin status changed: plugin=module-valorant-state, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:01.946Z [info] module-svc: Plugin status changed: plugin=module-valorant-pregame, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:01.947Z [info] module-svc: Plugin status changed: plugin=module-league-runes, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:01.947Z [info] module-svc: Plugin status changed: plugin=module-league-prm, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:01.947Z [info] module-svc: Plugin status changed: plugin=module-league-fearless, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:01.947Z [info] module-svc: Plugin status changed: plugin=module-league-end-of-game, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:01.947Z [info] module-svc: Plugin status changed: plugin=module-league-champselect-ui, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:01.947Z [info] module-svc: Plugin status changed: plugin=module-league-caster-cockpit, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:01.949Z [info] module-svc: Plugin status changed: plugin=module-caster, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:01.955Z [info] module-svc: Plugin status changed: plugin=plugin-webapi, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:01.955Z [info] module-svc: Plugin status changed: plugin=module-league-state, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:01.955Z [info] module-svc: Plugin status changed: plugin=module-league-in-game, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:01.958Z [info] module-svc: Plugin status changed: plugin=plugin-theming, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:01.959Z [info] module-svc: Plugin status changed: plugin=module-teams, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:01.960Z [warn] plugin-theming: Failed to load theme in C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\themes\New Theme Cannot find module 'C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\themes\New Theme\theme.json'
+Require stack:
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\dist\plugin.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\modules\Module.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\modules\ModuleService.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\controller\modules.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\controller\index.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\server.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\app.js
+2025-09-27T09:56:02.099Z [info] module-svc: Plugin status changed: plugin=module-league-static, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:02.122Z [info] module-svc: Plugin status changed: plugin=module-valorant-static, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:02.128Z [info] server: Listening for requests on http://localhost:3003
+2025-09-27T09:56:22.766Z [info] main:  _          _       _____           _ _    _ _   
+2025-09-27T09:56:22.768Z [info] main: | |    ___ | |     |_   _|__   ___ | | | _(_) |_ 
+2025-09-27T09:56:22.768Z [info] main: | |   / _ \| |       | |/ _ \ / _ \| | |/ / | __|
+2025-09-27T09:56:22.768Z [info] main: | |__| (_) | |___    | | (_) | (_) | |   <| | |_ 
+2025-09-27T09:56:22.768Z [info] main: |_____\___/|_____|   |_|\___/ \___/|_|_|\_\_|\__|
+2025-09-27T09:56:22.768Z [info] main: 
+2025-09-27T09:56:22.878Z [info] main: ==================================================
+2025-09-27T09:56:22.879Z [info] lpte-svc: Initialized event bus.
+2025-09-27T09:56:22.880Z [info] module-svc: Initializing module service.
+2025-09-27T09:56:22.879Z [info] main: There is a new version available: v1.13.2
+2025-09-27T09:56:22.879Z [info] main: ==================================================
+2025-09-27T09:56:22.879Z [info] main: 
+2025-09-27T09:56:23.174Z [info] module-svc: Initialized 19 module(s). Now loading plugins.
+2025-09-27T09:56:23.502Z [info] main: LoL Toolkit started up successfully.
+2025-09-27T09:56:23.174Z [info] module-svc: Loaded 19 plugin(s).
+2025-09-27T09:56:23.502Z [info] module-svc: Plugin status changed: plugin=plugin-prod-clock, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.503Z [info] module-svc: Plugin status changed: plugin=plugin-database, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.503Z [info] module-svc: Plugin status changed: plugin=plugin-config, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.503Z [info] module-svc: Plugin status changed: plugin=module-valorant-state, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.503Z [info] module-svc: Plugin status changed: plugin=module-valorant-pregame, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.504Z [info] module-svc: Plugin status changed: plugin=module-league-runes, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.504Z [info] module-svc: Plugin status changed: plugin=module-league-prm, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.504Z [info] module-svc: Plugin status changed: plugin=module-league-fearless, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.504Z [info] module-svc: Plugin status changed: plugin=module-league-end-of-game, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.504Z [info] module-svc: Plugin status changed: plugin=module-league-champselect-ui, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.504Z [info] module-svc: Plugin status changed: plugin=module-league-caster-cockpit, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.504Z [info] module-svc: Plugin status changed: plugin=module-caster, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.513Z [info] module-svc: Plugin status changed: plugin=plugin-webapi, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.513Z [info] module-svc: Plugin status changed: plugin=module-league-state, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.513Z [info] module-svc: Plugin status changed: plugin=module-league-in-game, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.516Z [info] module-svc: Plugin status changed: plugin=plugin-theming, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.517Z [warn] plugin-theming: Failed to load theme in C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\themes\New Theme Cannot find module 'C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\themes\New Theme\theme.json'
+Require stack:
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\dist\plugin.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\modules\Module.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\modules\ModuleService.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\controller\modules.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\controller\index.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\server.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\app.js
+2025-09-27T09:56:23.518Z [info] module-svc: Plugin status changed: plugin=module-teams, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.652Z [info] module-svc: Plugin status changed: plugin=module-league-static, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.707Z [info] module-svc: Plugin status changed: plugin=module-valorant-static, old=UNAVAILABLE, new=RUNNING
+2025-09-27T09:56:23.714Z [info] server: Listening for requests on http://localhost:3003
+2025-09-27T09:56:53.652Z [info] plugin-webapi: Fetching match data for matchid=NA1_NA1_5294880426
+2025-09-27T09:56:53.769Z [error] plugin-webapi: Failed to get match information for matchId=NA1_NA1_5294880426. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-27T09:56:53.771Z [error] module-league-state: Loading match failed for gameId=NA1_5294880426
+2025-09-27T09:57:08.071Z [info] plugin-webapi: Fetching match data for matchid=NA1_NA1_5294880426
+2025-09-27T09:57:08.161Z [error] plugin-webapi: Failed to get match information for matchId=NA1_NA1_5294880426. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-27T09:57:08.164Z [error] module-league-state: Loading match failed for gameId=NA1_5294880426
+2025-09-27T09:57:14.183Z [info] plugin-webapi: Fetching match data for matchid=NA1_NA1_5294880426
+2025-09-27T09:57:14.260Z [error] plugin-webapi: Failed to get match information for matchId=NA1_NA1_5294880426. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-27T09:57:14.263Z [error] module-league-state: Loading match failed for gameId=NA1_5294880426
+2025-09-27T09:57:19.148Z [info] plugin-webapi: Fetching match data for matchid=NA1_NA1_5342816024
+2025-09-27T09:57:19.210Z [error] plugin-webapi: Failed to get match information for matchId=NA1_NA1_5342816024. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-27T09:57:19.212Z [error] module-league-state: Loading match failed for gameId=NA1_5342816024
+2025-09-27T09:57:29.477Z [info] plugin-webapi: Fetching match data for matchid=NA1_NA1_5342816024
+2025-09-27T09:57:29.559Z [error] plugin-webapi: Failed to get match information for matchId=NA1_NA1_5342816024. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-27T09:57:29.560Z [error] module-league-state: Loading match failed for gameId=NA1_5342816024
+2025-09-27T09:57:32.783Z [info] plugin-webapi: Fetching match data for matchid=NA1_5342816024
+2025-09-27T09:57:33.136Z [info] plugin-webapi: Fetched match for matchId=NA1_5342816024, gameId=5342816024
+2025-09-27T09:57:37.672Z [info] plugin-webapi: Fetching match data for matchid=NA1_undefined
+2025-09-27T09:57:37.746Z [error] plugin-webapi: Failed to get match information for matchId=NA1_undefined. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-27T09:57:37.749Z [error] module-league-state: Loading match failed for gameId=undefined
+2025-09-27T09:57:40.195Z [info] plugin-webapi: Fetching match data for matchid=NA1_undefined
+2025-09-27T09:57:40.269Z [error] plugin-webapi: Failed to get match information for matchId=NA1_undefined. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2025-09-27T09:57:40.270Z [error] module-league-state: Loading match failed for gameId=undefined
+2025-09-27T09:57:42.631Z [info] plugin-webapi: Fetching match data for matchid=NA1_5342816024
+2025-09-27T09:57:42.961Z [info] plugin-webapi: Fetched match for matchId=NA1_5342816024, gameId=5342816024
+2025-09-27T09:57:46.455Z [info] plugin-webapi: Fetching match data for matchid=NA1_5342816024
+2025-09-27T09:57:46.734Z [info] plugin-webapi: Fetched match for matchId=NA1_5342816024, gameId=5342816024
+2025-12-14T09:18:10.538Z [info] main:  _          _       _____           _ _    _ _   
+2025-12-14T09:18:10.539Z [info] main: | |    ___ | |     |_   _|__   ___ | | | _(_) |_ 
+2025-12-14T09:18:10.539Z [info] main: | |   / _ \| |       | |/ _ \ / _ \| | |/ / | __|
+2025-12-14T09:18:10.539Z [info] main: | |__| (_) | |___    | | (_) | (_) | |   <| | |_ 
+2025-12-14T09:18:10.539Z [info] main: |_____\___/|_____|   |_|\___/ \___/|_|_|\_\_|\__|
+2025-12-14T09:18:10.539Z [info] main: 
+2025-12-14T09:18:10.927Z [info] main: ==================================================
+2025-12-14T09:18:10.928Z [info] lpte-svc: Initialized event bus.
+2025-12-14T09:18:10.928Z [info] module-svc: Initializing module service.
+2025-12-14T09:18:10.927Z [info] main: There is a new version available: v1.13.3
+2025-12-14T09:18:10.927Z [info] main: ==================================================
+2025-12-14T09:18:10.928Z [info] main: 
+2025-12-14T09:18:13.262Z [info] module-svc: Initialized 19 module(s). Now loading plugins.
+2025-12-14T09:18:13.788Z [info] main: LoL Toolkit started up successfully.
+2025-12-14T09:18:13.263Z [info] module-svc: Loaded 19 plugin(s).
+2025-12-14T09:18:13.789Z [info] module-svc: Plugin status changed: plugin=plugin-prod-clock, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:18:13.789Z [info] module-svc: Plugin status changed: plugin=plugin-database, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:18:13.789Z [info] module-svc: Plugin status changed: plugin=plugin-config, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:18:13.789Z [info] module-svc: Plugin status changed: plugin=module-valorant-state, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:18:13.790Z [info] module-svc: Plugin status changed: plugin=module-valorant-pregame, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:18:13.791Z [info] module-svc: Plugin status changed: plugin=module-league-runes, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:18:13.791Z [info] module-svc: Plugin status changed: plugin=module-league-prm, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:18:13.791Z [info] module-svc: Plugin status changed: plugin=module-league-fearless, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:18:13.791Z [info] module-svc: Plugin status changed: plugin=module-league-end-of-game, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:18:13.791Z [info] module-svc: Plugin status changed: plugin=module-league-champselect-ui, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:18:13.791Z [info] module-svc: Plugin status changed: plugin=module-league-caster-cockpit, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:18:13.791Z [info] module-svc: Plugin status changed: plugin=module-caster, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:18:13.797Z [info] module-svc: Plugin status changed: plugin=plugin-webapi, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:18:13.797Z [info] module-svc: Plugin status changed: plugin=module-league-state, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:18:13.797Z [info] module-svc: Plugin status changed: plugin=module-league-in-game, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:18:13.798Z [info] module-svc: Plugin status changed: plugin=plugin-theming, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:18:13.799Z [warn] plugin-theming: Failed to load theme in C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\themes\New Theme Cannot find module 'C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\themes\New Theme\theme.json'
+Require stack:
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\dist\plugin.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\modules\Module.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\modules\ModuleService.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\controller\modules.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\controller\index.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\server.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\app.js
+2025-12-14T09:18:13.800Z [info] module-svc: Plugin status changed: plugin=module-teams, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:18:13.871Z [info] module-svc: Plugin status changed: plugin=module-valorant-static, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:18:19.532Z [info] module-league-static: Start downloading additional files...
+2025-12-14T09:18:20.075Z [info] module-league-static: Finished downloading additional files
+2025-12-14T09:18:20.075Z [info] module-league-static: start downloading dragontail.tgz
+2025-12-14T09:18:56.220Z [info] module-league-static: 
+ finish downloading dragontail.tgz
+2025-12-14T09:18:56.220Z [info] module-league-static: Unpacking dragontail.tgz...
+2025-12-14T09:19:48.065Z [info] module-league-static: Finished unpacking dragontail.tgz
+2025-12-14T09:19:48.246Z [info] module-league-static: Moving files to frontend...
+2025-12-14T09:19:50.580Z [info] module-league-static: Deleting versioned folder...
+2025-12-14T09:19:50.580Z [info] module-league-static: Finished moving files to frontend
+2025-12-14T09:19:51.027Z [info] module-league-static: Finished deleting versioned folder
+2025-12-14T09:19:51.028Z [info] module-svc: Plugin status changed: plugin=module-league-static, old=UNAVAILABLE, new=RUNNING
+2025-12-14T09:19:51.033Z [info] server: Listening for requests on http://localhost:3003
+2025-12-14T09:19:51.055Z [info] plugin-config: config for module-league-static saved!
+2025-12-14T09:20:13.791Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-in-game","type":"request","version":1,"reply":"request-c8952884","channelType":"REQUEST"}
+2025-12-14T09:20:16.272Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-f4dcfe09","channelType":"REQUEST"}
+2025-12-14T09:20:18.790Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-c8952884, timeout=5000
+2025-12-14T09:20:18.790Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-in-game","type":"request","version":1,"reply":"request-c8952884","channelType":"REQUEST"}
+2025-12-14T09:20:19.261Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6k8kmj5il0sa"}
+2025-12-14T09:20:21.271Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-f4dcfe09, timeout=5000
+2025-12-14T09:20:21.271Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-f4dcfe09","channelType":"REQUEST"}
+2025-12-14T09:20:21.868Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6k8kmj5il2sr"}
+2025-12-14T09:20:24.256Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-2610124, timeout=5000
+2025-12-14T09:20:24.257Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-2610124","channelType":"REQUEST"}
+2025-12-14T09:20:24.258Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku6k8kmj5il0sa, timeout=5000
+2025-12-14T09:20:24.259Z [info] module-league-state: Failed to load statics
+2025-12-14T09:20:24.258Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6k8kmj5il0sa"}
+2025-12-14T09:20:26.866Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-129d5fff, timeout=5000
+2025-12-14T09:20:26.866Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-129d5fff","channelType":"REQUEST"}
+2025-12-14T09:20:26.868Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku6k8kmj5il2sr, timeout=5000
+2025-12-14T09:20:26.868Z [info] module-league-state: Failed to load statics
+2025-12-14T09:20:26.868Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6k8kmj5il2sr"}
+2025-12-14T09:20:31.752Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6k8kmj5ilafb"}
+2025-12-14T09:20:36.678Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6k8kmj5ile85"}
+2025-12-14T09:20:36.750Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-dcb0eced, timeout=5000
+2025-12-14T09:20:36.750Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-dcb0eced","channelType":"REQUEST"}
+2025-12-14T09:20:36.752Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku6k8kmj5ilafb, timeout=5000
+2025-12-14T09:20:36.752Z [info] module-league-state: Failed to load statics
+2025-12-14T09:20:36.752Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6k8kmj5ilafb"}
+2025-12-14T09:20:41.674Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-cbebec36, timeout=5000
+2025-12-14T09:20:41.675Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-cbebec36","channelType":"REQUEST"}
+2025-12-14T09:20:41.678Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku6k8kmj5ile85, timeout=5000
+2025-12-14T09:20:41.679Z [info] module-league-state: Failed to load statics
+2025-12-14T09:20:41.679Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6k8kmj5ile85"}
+2025-12-14T09:20:44.188Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-e206d8b0","channelType":"REQUEST"}
+2025-12-14T09:20:49.185Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-e206d8b0, timeout=5000
+2025-12-14T09:20:49.186Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-e206d8b0","channelType":"REQUEST"}
+2025-12-14T09:20:49.950Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6k8kmj5ilogt"}
+2025-12-14T09:20:52.837Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-9314ac2b","channelType":"REQUEST"}
+2025-12-14T09:20:54.948Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-79d919a4, timeout=5000
+2025-12-14T09:20:54.948Z [info] module-league-state: Failed to load statics
+2025-12-14T09:20:54.948Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-79d919a4","channelType":"REQUEST"}
+2025-12-14T09:20:54.948Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku6k8kmj5ilogt, timeout=5000
+2025-12-14T09:20:54.948Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6k8kmj5ilogt"}
+2025-12-14T09:20:57.835Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-9314ac2b, timeout=5000
+2025-12-14T09:20:57.835Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-9314ac2b","channelType":"REQUEST"}
+2025-12-14T09:21:10.237Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6k8kmj5im44c"}
+2025-12-14T09:21:15.236Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-b50878bc, timeout=5000
+2025-12-14T09:21:15.237Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-b50878bc","channelType":"REQUEST"}
+2025-12-14T09:21:15.238Z [info] module-league-state: Failed to load statics
+2025-12-14T09:21:15.237Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku6k8kmj5im44c, timeout=5000
+2025-12-14T09:21:15.237Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6k8kmj5im44c"}
+2025-12-14T09:21:21.779Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6k8kmj5imd0y"}
+2025-12-14T09:21:26.777Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-7081682a, timeout=5000
+2025-12-14T09:21:26.777Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-7081682a","channelType":"REQUEST"}
+2025-12-14T09:21:26.778Z [info] module-league-state: Failed to load statics
+2025-12-14T09:21:26.778Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku6k8kmj5imd0y, timeout=5000
+2025-12-14T09:21:26.778Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku6k8kmj5imd0y"}
+2026-01-09T06:35:56.865Z [info] main:  _          _       _____           _ _    _ _   
+2026-01-09T06:35:56.866Z [info] main: | |    ___ | |     |_   _|__   ___ | | | _(_) |_ 
+2026-01-09T06:35:56.866Z [info] main: | |   / _ \| |       | |/ _ \ / _ \| | |/ / | __|
+2026-01-09T06:35:56.867Z [info] main: | |__| (_) | |___    | | (_) | (_) | |   <| | |_ 
+2026-01-09T06:35:56.867Z [info] main: |_____\___/|_____|   |_|\___/ \___/|_|_|\_\_|\__|
+2026-01-09T06:35:56.867Z [info] main: 
+2026-01-09T06:35:57.300Z [info] main: ==================================================
+2026-01-09T06:35:57.301Z [info] lpte-svc: Initialized event bus.
+2026-01-09T06:35:57.301Z [info] module-svc: Initializing module service.
+2026-01-09T06:35:57.300Z [info] main: There is a new version available: v1.13.5
+2026-01-09T06:35:57.301Z [info] main: ==================================================
+2026-01-09T06:35:57.301Z [info] main: 
+2026-01-09T06:35:59.732Z [info] module-svc: Initialized 19 module(s). Now loading plugins.
+2026-01-09T06:36:00.305Z [info] main: LoL Toolkit started up successfully.
+2026-01-09T06:35:59.733Z [info] module-svc: Loaded 19 plugin(s).
+2026-01-09T06:36:00.306Z [info] module-svc: Plugin status changed: plugin=plugin-prod-clock, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:36:00.306Z [info] module-svc: Plugin status changed: plugin=plugin-database, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:36:00.306Z [info] module-svc: Plugin status changed: plugin=plugin-config, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:36:00.306Z [info] module-svc: Plugin status changed: plugin=module-valorant-state, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:36:00.306Z [info] module-svc: Plugin status changed: plugin=module-valorant-pregame, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:36:00.307Z [info] module-svc: Plugin status changed: plugin=module-league-runes, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:36:00.307Z [info] module-svc: Plugin status changed: plugin=module-league-prm, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:36:00.307Z [info] module-svc: Plugin status changed: plugin=module-league-fearless, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:36:00.307Z [info] module-svc: Plugin status changed: plugin=module-league-end-of-game, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:36:00.308Z [info] module-svc: Plugin status changed: plugin=module-league-champselect-ui, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:36:00.308Z [info] module-svc: Plugin status changed: plugin=module-league-caster-cockpit, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:36:00.309Z [info] module-svc: Plugin status changed: plugin=module-caster, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:36:00.315Z [info] module-svc: Plugin status changed: plugin=plugin-webapi, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:36:00.315Z [info] module-svc: Plugin status changed: plugin=module-league-state, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:36:00.315Z [info] module-svc: Plugin status changed: plugin=module-league-in-game, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:36:00.317Z [warn] plugin-theming: Failed to load theme in C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\themes\New Theme Cannot find module 'C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\themes\New Theme\theme.json'
+Require stack:
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\dist\plugin.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\modules\Module.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\modules\ModuleService.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\controller\modules.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\controller\index.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\server.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\app.js
+2026-01-09T06:36:00.317Z [info] module-svc: Plugin status changed: plugin=plugin-theming, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:36:00.318Z [info] module-svc: Plugin status changed: plugin=module-teams, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:36:00.391Z [info] module-svc: Plugin status changed: plugin=module-valorant-static, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:36:04.590Z [info] module-league-static: Start downloading additional files...
+2026-01-09T06:36:05.121Z [info] module-league-static: Finished downloading additional files
+2026-01-09T06:36:05.121Z [info] module-league-static: start downloading dragontail.tgz
+2026-01-09T06:36:16.072Z [info] module-league-static: 
+ finish downloading dragontail.tgz
+2026-01-09T06:36:16.073Z [info] module-league-static: Unpacking dragontail.tgz...
+2026-01-09T06:37:06.687Z [info] module-league-static: Finished unpacking dragontail.tgz
+2026-01-09T06:37:06.837Z [info] module-league-static: Moving files to frontend...
+2026-01-09T06:37:08.937Z [info] module-league-static: Deleting versioned folder...
+2026-01-09T06:37:08.937Z [info] module-league-static: Finished moving files to frontend
+2026-01-09T06:37:09.346Z [info] module-league-static: Finished deleting versioned folder
+2026-01-09T06:37:09.347Z [info] module-svc: Plugin status changed: plugin=module-league-static, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:37:09.349Z [info] plugin-config: config for module-league-static saved!
+2026-01-09T06:37:09.354Z [info] server: Listening for requests on http://localhost:3003
+2026-01-09T06:38:01.717Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-69cd86d7","channelType":"REQUEST"}
+2026-01-09T06:38:06.716Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-69cd86d7, timeout=5000
+2026-01-09T06:38:06.717Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-static","type":"request-constants","version":1,"reply":"request-constants-69cd86d7","channelType":"REQUEST"}
+2026-01-09T06:38:42.534Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku65womk6i9c2t"}
+2026-01-09T06:38:47.531Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-46a760cf, timeout=5000
+2026-01-09T06:38:47.532Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-46a760cf","channelType":"REQUEST"}
+2026-01-09T06:38:47.533Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku65womk6i9c2t, timeout=5000
+2026-01-09T06:38:47.533Z [info] module-league-state: Failed to load statics
+2026-01-09T06:38:47.533Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku65womk6i9c2t"}
+2026-01-09T06:38:57.909Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku65womk6i9nxw"}
+2026-01-09T06:38:59.169Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku65womk6i9oww"}
+2026-01-09T06:39:02.906Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-aacff855, timeout=5000
+2026-01-09T06:39:02.906Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-aacff855","channelType":"REQUEST"}
+2026-01-09T06:39:02.909Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku65womk6i9nxw, timeout=5000
+2026-01-09T06:39:02.909Z [info] module-league-state: Failed to load statics
+2026-01-09T06:39:02.909Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku65womk6i9nxw"}
+2026-01-09T06:39:04.166Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-d45a8360, timeout=5000
+2026-01-09T06:39:04.166Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-d45a8360","channelType":"REQUEST"}
+2026-01-09T06:39:04.170Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku65womk6i9oww, timeout=5000
+2026-01-09T06:39:04.170Z [info] module-league-state: Failed to load statics
+2026-01-09T06:39:04.170Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku65womk6i9oww"}
+2026-01-09T06:46:53.659Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku65womk6ijv16"}
+2026-01-09T06:46:58.656Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-88b13e54, timeout=5000
+2026-01-09T06:46:58.657Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-88b13e54","channelType":"REQUEST"}
+2026-01-09T06:46:58.658Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku65womk6ijv16, timeout=5000
+2026-01-09T06:46:58.658Z [info] module-league-state: Failed to load statics
+2026-01-09T06:46:58.658Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku65womk6ijv16"}
+2026-01-09T06:47:04.771Z [warn] lpte-svc: Request was sent, but no handler was executed. This will result in a timeout. Meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku65womk6ik3lu"}
+2026-01-09T06:47:09.770Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=set-game-8615a9b7, timeout=5000
+2026-01-09T06:47:09.770Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"namespace":"module-league-state","type":"set-game","version":1,"reply":"set-game-8615a9b7","channelType":"REQUEST"}
+2026-01-09T06:47:09.770Z [info] module-league-state: Failed to load statics
+2026-01-09T06:47:09.770Z [warn] lpte-svc: Awaiting event timed out. namespace=reply, type=request-constants-lku65womk6ik3lu, timeout=5000
+2026-01-09T06:47:09.770Z [error] lpte-svc: Request timed out after 5000ms. Request meta={"channelType":"REQUEST","namespace":"module-league-static","type":"request-constants","version":1,"sender":{"name":"module-league-state","version":"4.14.2","mode":"PLUGIN","path":"C:\\Users\\Nicholas\\Desktop\\Prod Tool Kit\\modules\\module-league-state"},"reply":"request-constants-lku65womk6ik3lu"}
+2026-01-09T06:47:22.189Z [info] main:  _          _       _____           _ _    _ _   
+2026-01-09T06:47:22.191Z [info] main: | |    ___ | |     |_   _|__   ___ | | | _(_) |_ 
+2026-01-09T06:47:22.191Z [info] main: | |   / _ \| |       | |/ _ \ / _ \| | |/ / | __|
+2026-01-09T06:47:22.191Z [info] main: | |__| (_) | |___    | | (_) | (_) | |   <| | |_ 
+2026-01-09T06:47:22.191Z [info] main: |_____\___/|_____|   |_|\___/ \___/|_|_|\_\_|\__|
+2026-01-09T06:47:22.191Z [info] main: 
+2026-01-09T06:47:22.617Z [info] main: ==================================================
+2026-01-09T06:47:22.618Z [info] lpte-svc: Initialized event bus.
+2026-01-09T06:47:22.618Z [info] module-svc: Initializing module service.
+2026-01-09T06:47:22.617Z [info] main: There is a new version available: v1.13.5
+2026-01-09T06:47:22.618Z [info] main: ==================================================
+2026-01-09T06:47:22.618Z [info] main: 
+2026-01-09T06:47:43.826Z [info] module-svc: Initialized 19 module(s). Now loading plugins.
+2026-01-09T06:47:44.125Z [info] main: LoL Toolkit started up successfully.
+2026-01-09T06:47:43.826Z [info] module-svc: Loaded 19 plugin(s).
+2026-01-09T06:47:44.126Z [info] module-svc: Plugin status changed: plugin=plugin-prod-clock, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.126Z [info] module-svc: Plugin status changed: plugin=plugin-database, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.126Z [info] module-svc: Plugin status changed: plugin=plugin-config, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.126Z [info] module-svc: Plugin status changed: plugin=module-valorant-state, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.126Z [info] module-svc: Plugin status changed: plugin=module-valorant-pregame, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.127Z [info] module-svc: Plugin status changed: plugin=module-league-runes, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.127Z [info] module-svc: Plugin status changed: plugin=module-league-prm, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.127Z [info] module-svc: Plugin status changed: plugin=module-league-fearless, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.127Z [info] module-svc: Plugin status changed: plugin=module-league-end-of-game, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.128Z [info] module-svc: Plugin status changed: plugin=module-league-champselect-ui, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.128Z [info] module-svc: Plugin status changed: plugin=module-league-caster-cockpit, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.130Z [info] module-svc: Plugin status changed: plugin=module-caster, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.135Z [info] module-svc: Plugin status changed: plugin=plugin-webapi, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.135Z [info] module-svc: Plugin status changed: plugin=module-league-state, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.135Z [info] module-svc: Plugin status changed: plugin=module-league-in-game, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.136Z [warn] plugin-theming: Failed to load theme in C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\themes\New Theme Cannot find module 'C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\themes\New Theme\theme.json'
+Require stack:
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\dist\plugin.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\modules\Module.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\modules\ModuleService.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\controller\modules.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\controller\index.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\server.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\app.js
+2026-01-09T06:47:44.137Z [info] module-svc: Plugin status changed: plugin=plugin-theming, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.137Z [info] module-svc: Plugin status changed: plugin=module-teams, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.258Z [info] module-svc: Plugin status changed: plugin=module-league-static, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.284Z [info] module-svc: Plugin status changed: plugin=module-valorant-static, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:47:44.319Z [info] server: Listening for requests on http://localhost:3003
+2026-01-09T06:49:14.203Z [info] module-svc: module-league-end-of-game was successfully installed
+2026-01-09T06:49:14.203Z [info] module-svc: plugin module-league-end-of-game was updated
+2026-01-09T06:49:14.204Z [info] module-svc: Plugin status changed: plugin=module-league-end-of-game, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:49:26.948Z [info] module-svc: plugin-webapi was successfully installed
+2026-01-09T06:49:26.948Z [info] module-svc: plugin plugin-webapi was updated
+2026-01-09T06:49:26.953Z [info] module-svc: Plugin status changed: plugin=plugin-webapi, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:49:27.360Z [info] module-svc: plugin-theming was successfully installed
+2026-01-09T06:49:27.360Z [info] module-svc: plugin plugin-theming was updated
+2026-01-09T06:49:27.362Z [info] module-svc: Plugin status changed: plugin=plugin-theming, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:49:27.363Z [warn] plugin-theming: Failed to load theme in C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\themes\New Theme Cannot find module 'C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\themes\New Theme\theme.json'
+Require stack:
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\modules\plugin-theming\dist\plugin.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\modules\Module.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\modules\ModuleService.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\controller\modules.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\controller\index.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\web\server.js
+- C:\Users\Nicholas\Desktop\Prod Tool Kit\dist\core\app.js
+2026-01-09T06:49:27.528Z [info] module-svc: plugin-prod-clock was successfully installed
+2026-01-09T06:49:27.528Z [info] module-svc: plugin plugin-prod-clock was updated
+2026-01-09T06:49:27.529Z [info] module-svc: Plugin status changed: plugin=plugin-prod-clock, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:49:28.134Z [info] module-svc: plugin-database was successfully installed
+2026-01-09T06:49:28.134Z [info] module-svc: plugin plugin-database was updated
+2026-01-09T06:49:28.135Z [info] module-svc: Plugin status changed: plugin=plugin-database, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:49:28.274Z [info] module-svc: plugin-config was successfully installed
+2026-01-09T06:49:28.274Z [info] module-svc: plugin plugin-config was updated
+2026-01-09T06:49:28.275Z [info] module-svc: Plugin status changed: plugin=plugin-config, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:49:29.341Z [info] module-svc: module-league-static was successfully installed
+2026-01-09T06:49:29.341Z [info] module-svc: plugin module-league-static was updated
+2026-01-09T06:49:29.381Z [info] module-svc: Plugin status changed: plugin=module-league-static, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:49:29.427Z [info] module-svc: module-league-state was successfully installed
+2026-01-09T06:49:29.427Z [info] module-svc: plugin module-league-state was updated
+2026-01-09T06:49:29.430Z [info] module-svc: Plugin status changed: plugin=module-league-state, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:49:29.658Z [info] module-svc: module-league-runes was successfully installed
+2026-01-09T06:49:29.658Z [info] module-svc: plugin module-league-runes was updated
+2026-01-09T06:49:29.659Z [info] module-svc: Plugin status changed: plugin=module-league-runes, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:49:31.482Z [info] module-svc: module-league-prm was successfully installed
+2026-01-09T06:49:31.483Z [info] module-svc: plugin module-league-prm was updated
+2026-01-09T06:49:31.483Z [info] module-svc: Plugin status changed: plugin=module-league-prm, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:49:32.009Z [info] module-svc: module-league-in-game was successfully installed
+2026-01-09T06:49:32.009Z [info] module-svc: plugin module-league-in-game was updated
+2026-01-09T06:49:32.012Z [info] module-svc: Plugin status changed: plugin=module-league-in-game, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:49:32.792Z [info] module-svc: module-league-caster-cockpit was successfully installed
+2026-01-09T06:49:32.793Z [info] module-svc: plugin module-league-caster-cockpit was updated
+2026-01-09T06:49:32.793Z [info] module-svc: Plugin status changed: plugin=module-league-caster-cockpit, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:49:33.384Z [info] module-svc: module-league-champselect-ui was successfully installed
+2026-01-09T06:49:33.384Z [info] module-svc: plugin module-league-champselect-ui was updated
+2026-01-09T06:49:33.385Z [info] module-svc: Plugin status changed: plugin=module-league-champselect-ui, old=UNAVAILABLE, new=RUNNING
+2026-01-09T06:49:52.235Z [info] plugin-webapi: Fetching match data for matchid=NA1_NA1_5342816024
+2026-01-09T06:49:52.239Z [info] plugin-webapi: Fetching match data for matchid=NA1_NA1_5342816024
+2026-01-09T06:49:52.240Z [info] plugin-webapi: Fetching match data for matchid=NA1_NA1_5342816024
+2026-01-09T06:49:52.240Z [info] plugin-webapi: Fetching match data for matchid=NA1_NA1_5342816024
+2026-01-09T06:49:52.337Z [error] plugin-webapi: Failed to get match information for matchId=NA1_NA1_5342816024. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2026-01-09T06:49:52.337Z [error] module-league-state: Loading match failed for gameId=NA1_5342816024
+2026-01-09T06:49:52.339Z [error] plugin-webapi: Failed to get match information for matchId=NA1_NA1_5342816024. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2026-01-09T06:49:52.342Z [error] module-league-state: Loading match failed for gameId=NA1_5342816024
+2026-01-09T06:49:52.351Z [error] plugin-webapi: Failed to get match information for matchId=NA1_NA1_5342816024. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2026-01-09T06:49:52.356Z [error] plugin-webapi: Failed to get match information for matchId=NA1_NA1_5342816024. Maybe the match is not over yet? error=GenericError: Request failed with status code 404
+2026-01-09T06:50:00.377Z [info] plugin-webapi: Fetching match data for matchid=NA1_5342816024
+2026-01-09T06:50:00.379Z [info] plugin-webapi: Fetching match data for matchid=NA1_5342816024
+2026-01-09T06:50:00.380Z [info] plugin-webapi: Fetching match data for matchid=NA1_5342816024
+2026-01-09T06:50:00.380Z [info] plugin-webapi: Fetching match data for matchid=NA1_5342816024
+2026-01-09T06:50:00.735Z [info] plugin-webapi: Fetched match for matchId=NA1_5342816024, gameId=5342816024
+2026-01-09T06:50:00.746Z [info] plugin-webapi: Fetched match for matchId=NA1_5342816024, gameId=5342816024
+2026-01-09T06:50:00.752Z [info] plugin-webapi: Fetched match for matchId=NA1_5342816024, gameId=5342816024
+2026-01-09T06:50:00.759Z [info] plugin-webapi: Fetched match for matchId=NA1_5342816024, gameId=5342816024

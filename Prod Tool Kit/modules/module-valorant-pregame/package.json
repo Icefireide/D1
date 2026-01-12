@@ -1,0 +1,31 @@
+{
+  "name": "module-valorant-pregame",
+  "version": "1.3.1",
+  "description": "Module that provides a gfx for the Valorant PreGame",
+  "author": "RCVolus",
+  "license": "MIT",
+  "toolkit": {
+    "modes": [
+      "PLUGIN"
+    ],
+    "plugin": {
+      "main": "dist/plugin.js"
+    },
+    "needsBuild": true,
+    "toolkitVersion": ">=1.11",
+    "dependencies": [
+      "module-valorant-state",
+      "module-valorant-static"
+    ]
+  },
+  "devDependencies": {
+    "@rcv-prod-toolkit/types": "github:rcv-prod-toolkit/types",
+    "typescript": "^5.5.4",
+    "sass": "^1.83.4"
+  },
+  "scripts": {
+    "compile-sass": "sass frontend/gfx/:frontend/gfx/",
+    "watch-sass": "sass --watch frontend/gfx/:frontend/gfx/",
+    "build": "npm run compile-sass && tsc"
+  }
+}

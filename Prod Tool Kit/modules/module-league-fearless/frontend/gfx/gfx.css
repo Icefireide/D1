@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background: black; */
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  display: flex;
+}
+
+.container img {
+  width: 2.3rem;
+  margin: 0 0.3rem;
+  object-fit: contain;
+}

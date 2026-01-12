@@ -1,0 +1,82 @@
+extends layout
+
+block layout-content
+  script.
+    async function download (asset) {
+      LPTE.emit({
+        meta: {
+          namespace: 'lpt',
+          type: 'update-plugin',
+          version: 1
+        },
+        name: asset.name
+      })
+    };
+    async function install (asset) {
+      LPTE.emit({
+        meta: {
+          namespace: 'lpt',
+          type: 'install-plugin',
+          version: 1
+        },
+        name: asset.name
+      })
+    };
+
+  h1 Modules
+  p Modules provide you the actual functionality.
+
+  h2 Installed Modules
+  p Currently, there are <strong>#{moduleCount}</strong> module(s) registered.
+
+  each key in Object.keys(installedModules)
+    if installedModules[key].length > 0
+      h3= key
+      table.table
+        thead
+          tr
+            th Name
+            th Author
+            th Plugin
+            th Version
+            th Newest Version
+            th
+        tbody
+          each mod in installedModules[key]
+            tr
+              td.align-middle= mod.getName()
+              td.align-middle= mod.getAuthor()
+              - pluginStatus = mod.hasPlugin() ? mod.getPlugin().status : 'UNAVAILABLE'
+              if pluginStatus === 'RUNNING'
+                td.align-middle.table-success= pluginStatus
+              if pluginStatus === 'UNAVAILABLE'
+                td.align-middle.table-danger= pluginStatus
+              td.align-middle= "v" + mod.getVersion()
+              td.align-middle= mod.getNewestVersion()
+              if mod.updateAvailable
+                td.align-middle
+                  button.btn.btn-success(onclick=`download(${JSON.stringify(mod.asset)})`)= Update
+                    i.fa.fa-download
+              else
+                td.align-middle
+
+  h2.mt-5 Available Modules
+  p There are also <strong>#{availableModuleCount}</strong> module(s) available for installation.
+
+  each key in Object.keys(availableModules)
+    if availableModules[key].length > 0
+      h3= key
+      table.table
+        thead
+          tr
+            th Name
+            th Version
+            th
+        tbody
+          each mod in availableModules[key]
+            tr
+              td.align-middle= mod.name
+              td.align-middle= mod.version
+              td.align-middle
+                button.btn.btn-success(onclick=`install(${JSON.stringify(mod)})`)= Install
+                  i.fa.fa-download

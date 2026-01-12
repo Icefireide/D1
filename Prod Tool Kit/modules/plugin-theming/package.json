@@ -1,0 +1,30 @@
+{
+    "name": "plugin-theming",
+    "version": "1.3.4",
+    "description": "Module that provides theming to web graphical elements, like WebGFX",
+    "author": "RCVolus",
+    "repository": "https://github.com/rcv-prod-toolkit/plugin-theming",
+    "license": "MIT",
+    "toolkit": {
+        "modes": [
+            "PLUGIN"
+        ],
+        "plugin": {
+            "main": "dist/plugin.js"
+        },
+        "toolkitVersion": ">=1.8",
+        "needsBuild": true
+    },
+    "dependencies": {
+        "fs-extra": "^11.3.3",
+        "sass": "^1.97.2"
+    },
+    "scripts": {
+        "build": "tsc"
+    },
+    "devDependencies": {
+        "@rcv-prod-toolkit/types": "github:rcv-prod-toolkit/types",
+        "@types/fs-extra": "^11.0.4",
+        "typescript": "^5.5.4"
+    }
+}

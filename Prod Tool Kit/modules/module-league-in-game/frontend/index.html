@@ -1,0 +1,526 @@
+<h1>In-Game Information</h1>
+
+<h2>Preview</h2>
+<div style="width: 960px; height: 540px; overflow: hidden">
+  <iframe
+    id="ingame-gfx"
+    width="1920"
+    height="1080"
+    style="transform: scale(0.5); transform-origin: 0 0"
+  ></iframe>
+</div>
+
+<h2>Embed</h2>
+<input style="width: 100%" readonly id="ingame-embed" class="mb-5" />
+
+<div class="d-flex mb-3">
+  <div class="btn-group mr-3">
+    <button type="button" class="btn btn-primary" onclick="showInhibs(100)">
+      Show Blue Inhibitors
+    </button>
+    <button
+      type="button"
+      class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+      <button
+        class="dropdown-item"
+        onclick="window.getActionLink(
+          'module-league-in-game',
+          'show-inhibs',
+          {
+            'side': 100
+          }
+        )"
+      >
+        Copy Action-Link
+      </button>
+    </div>
+  </div>
+
+  <div class="btn-group mr-3">
+    <button type="button" class="btn btn-secondary" onclick="hideInhibs()">
+      Hide Inhibitors
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+      <button
+        class="dropdown-item"
+        onclick="window.getActionLink(
+          'module-league-in-game',
+          'hide-inhibs'
+        )"
+      >
+        Copy Action-Link
+      </button>
+    </div>
+  </div>
+  <div class="btn-group mr-3">
+    <button type="button" class="btn btn-secondary" onclick="showInhibs(300)">
+      Show Both Inhibitors
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+      <button
+        class="dropdown-item"
+        onclick="window.getActionLink(
+          'module-league-in-game',
+          'show-inhibs',
+          {
+            'side': 300
+          }
+        )"
+      >
+        Copy Action-Link
+      </button>
+    </div>
+  </div>
+
+  <div class="btn-group mr-3">
+    <button type="button" class="btn btn-danger" onclick="showInhibs(200)">
+      Show Red Inhibitors
+    </button>
+    <button
+      type="button"
+      class="btn btn-danger dropdown-toggle dropdown-toggle-split"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+      <button
+        class="dropdown-item"
+        onclick="window.getActionLink(
+          'module-league-in-game',
+          'show-inhibs',
+          {
+            'side': 200
+          }
+        )"
+      >
+        Copy Action-Link
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex mb-3">
+  <div class="btn-group mr-3">
+    <button type="button" class="btn btn-secondary" onclick="showPlatings()">
+      Show Platings
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+      <button
+        class="dropdown-item"
+        onclick="window.getActionLink(
+          'module-league-in-game',
+          'show-platings'
+        )"
+      >
+        Copy Action-Link
+      </button>
+    </div>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-secondary" onclick="hidePlatings()">
+      Hide Platings
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+      <button
+        class="dropdown-item"
+        onclick="window.getActionLink(
+          'module-league-in-game',
+          'hide-platings'
+        )"
+      >
+        Copy Action-Link
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex mb-3">
+  <div class="btn-group mr-3">
+    <button
+      type="button"
+      class="btn btn-warning"
+      onclick="showLeaderBoard('gold')"
+    >
+      Show Gold Leader-Board
+    </button>
+    <button
+      type="button"
+      class="btn btn-warning dropdown-toggle dropdown-toggle-split"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+      <button
+        class="dropdown-item"
+        onclick="window.getActionLink(
+          'module-league-in-game',
+          'show-leader-board',
+          {
+            'leaderboard': 'gold'
+          }
+        )"
+      >
+        Copy Action-Link
+      </button>
+    </div>
+  </div>
+  <div class="btn-group mr-3">
+    <button type="button" class="btn btn-info" onclick="showLeaderBoard('xp')">
+      Show Level + XP Leader-Board
+    </button>
+    <button
+      type="button"
+      class="btn btn-info dropdown-toggle dropdown-toggle-split"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+      <button
+        class="dropdown-item"
+        onclick="window.getActionLink(
+          'module-league-in-game',
+          'show-leader-board',
+          {
+            'leaderboard': 'xp'
+          }
+        )"
+      >
+        Copy Action-Link
+      </button>
+    </div>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-secondary" onclick="hideLeaderBoard()">
+      Hide Leader-Board
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+      <button
+        class="dropdown-item"
+        onclick="window.getActionLink(
+          'module-league-in-game',
+          'hide-leader-board'
+        )"
+      >
+        Copy Action-Link
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex mb-5">
+  <div class="btn-group mr-3">
+    <button type="button" class="btn btn-warning" onclick="showGoldGraph()">
+      Toggle Gold-Graph
+    </button>
+    <button
+      type="button"
+      class="btn btn-warning dropdown-toggle dropdown-toggle-split"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+      <button
+        class="dropdown-item"
+        onclick="window.getActionLink(
+        'module-league-in-game',
+        'show-gold-graph'
+      )"
+      >
+        Copy Action-Link
+      </button>
+    </div>
+  </div>
+</div>
+
+<h2>Settings</h2>
+<form id="settings" class="mb-5">
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="scoreboard-active" />
+    <label class="form-check-label" for="scoreboard-active"
+      >Scoreboard active</label
+    >
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="scoreboard-score" />
+    <label class="form-check-label" for="scoreboard-score">Score</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="scoreboard-tags" />
+    <label class="form-check-label" for="scoreboard-tags">Tags</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="scoreboard-standings" />
+    <label class="form-check-label" for="scoreboard-standings">Standings</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="scoreboard-barons" />
+    <label class="form-check-label" for="scoreboard-barons">Barons</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="scoreboard-heralds" />
+    <label class="form-check-label" for="scoreboard-heralds">Heralds</label>
+  </div>
+  <div class="form-check form-check-inline mb-3">
+    <input class="form-check-input" type="checkbox" id="scoreboard-tower" />
+    <label class="form-check-label" for="scoreboard-tower">Tower</label>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="items">Item Display</label>
+    <select multiple class="form-control" id="items">
+      <option>Starter</option>
+      <option>Consumable</option>
+      <option>Epic</option>
+      <option>Legendary</option>
+      <option>Mythic</option>
+    </select>
+  </div>
+  <div class="form-group mb-3">
+    <label for="level">Level Display</label>
+    <select multiple class="form-control" id="level">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+      <option>13</option>
+      <option>14</option>
+      <option>15</option>
+      <option>16</option>
+      <option>17</option>
+      <option>18</option>
+    </select>
+  </div>
+  <div class="form-group mb-3">
+    <label for="events">Events</label>
+    <select multiple class="form-control" id="events">
+      <option>Dragons</option>
+      <option>Heralds</option>
+      <option>Barons</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="delay">Display Delay (ms)</label>
+    <input
+      type="number"
+      min="0"
+      step="1"
+      max="10000"
+      class="form-control"
+      id="delay"
+      placeholder="Display Delay (ms)"
+    />
+  </div>
+  <div class="form-check mb-3">
+    <input class="form-check-input" type="checkbox" value="" id="killfeed" />
+    <label class="form-check-label" for="killfeed"> Activate Killfeed </label>
+  </div>
+  <div class="form-check mb-3">
+    <input class="form-check-input" type="checkbox" value="" id="ppTimer" />
+    <label class="form-check-label" for="ppTimer">
+      Activate Power-Play Timer
+    </label>
+  </div>
+  <div class="form-check mb-3">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      value=""
+      id="showNicknames"
+    />
+    <label class="form-check-label" for="showNicknames"> Show Nicknames </label>
+  </div>
+  <div class="form-check mb-3">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      value=""
+      id="showTournament"
+    />
+    <label class="form-check-label" for="showTournament">
+      Show Tournnament Info
+    </label>
+  </div>
+  <div class="form-check mb-3">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      value=""
+      id="autoTargetFrameCover"
+    />
+    <label class="form-check-label" for="autoTargetFrameCover">
+      Cover Target Frame automatically
+    </label>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Save Settings</button>
+  </div>
+</form>
+
+<h2 class="mb-1">Reset</h2>
+<p class="mb-3">
+  Only use this when really needed, all game data of the current game will be
+  lost!
+</p>
+<div class="mb-5">
+  <button class="btn btn-danger btn-lg" onclick="resetGame()">
+    Reset Game State
+  </button>
+</div>
+
+<h2 class="mb-3">Testing</h2>
+
+<h3>Test Level-Up</h3>
+<div class="d-flex align-items-center mb-3" style="gap: 1rem">
+  <input
+    type="number"
+    value="6"
+    min="0"
+    max="18"
+    step="1"
+    class="form-control w-25"
+    id="testLevel"
+  />
+  <button class="btn btn-primary btn-lg" onclick="testLvl(100)">
+    Test Blue team
+  </button>
+  <button class="btn btn-danger btn-lg" onclick="testLvl(200)">
+    Test Red Team
+  </button>
+</div>
+
+<h3>Test Item</h3>
+<div class="d-flex align-items-center mb-3" style="gap: 1rem">
+  <button class="btn btn-primary btn-lg" onclick="testItem(100)">
+    Test Blue team
+  </button>
+  <button class="btn btn-danger btn-lg" onclick="testItem(200)">
+    Test Red Team
+  </button>
+</div>
+
+<h3>Test Event</h3>
+<div class="d-flex align-items-center mb-3" style="gap: 1rem">
+  <select class="form-control" id="events-test" style="width: 24%">
+    <option selected>Dragon</option>
+    <option>Herald</option>
+    <option>Baron</option>
+  </select>
+  <select class="form-control" id="dragons-test" style="width: 24%">
+    <option selected>Chemtech</option>
+    <option>Cloud</option>
+    <option>Elder</option>
+    <option>Hextech</option>
+    <option>Infernal</option>
+    <option>Mountain</option>
+    <option>Ocean</option>
+  </select>
+  <button class="btn btn-primary btn-lg" onclick="testEvent(100)">
+    Test Blue team
+  </button>
+  <button class="btn btn-danger btn-lg" onclick="testEvent(200)">
+    Test Red Team
+  </button>
+</div>
+
+<h3>Test Killfeed</h3>
+<div class="d-flex align-items-center mb-3" style="gap: 1rem">
+  <select class="form-control" id="killfeed-test" style="width: 24%">
+    <option selected>Kill</option>
+    <option>Turret</option>
+    <option>Inhib</option>
+  </select>
+  <button class="btn btn-primary btn-lg" onclick="testKillfeed(100)">
+    Test Blue team
+  </button>
+  <button class="btn btn-danger btn-lg" onclick="testKillfeed(200)">
+    Test Red Team
+  </button>
+</div>
+
+<h3>Test Powerplay</h3>
+<div class="d-flex align-items-center mb-3" style="gap: 1rem">
+  <select class="form-control" id="pp-test" style="width: 24%">
+    <option selected>Baron</option>
+    <option>Dragon</option>
+  </select>
+  <button class="btn btn-primary btn-lg" onclick="testPPTimer(true)">
+    Show Timer
+  </button>
+  <button class="btn btn-danger btn-lg" onclick="testPPTimer(false)">
+    Hide Timer
+  </button>
+</div>
+
+<script src="/pages/op-module-league-in-game/frontend.js" defer></script>

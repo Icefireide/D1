@@ -1,0 +1,24 @@
+{
+  "name": "module-caster",
+  "version": "2.1.0",
+  "description": "Module that provides GFX elements for the current caster",
+  "author": "RCVolus",
+  "license": "MIT",
+  "toolkit": {
+    "modes": [
+      "PLUGIN"
+    ],
+    "plugin": {
+      "main": "dist/plugin.js"
+    },
+    "toolkitVersion": ">=1.11",
+    "needsBuild": true
+  },
+  "devDependencies": {
+    "@rcv-prod-toolkit/types": "github:rcv-prod-toolkit/types",
+    "typescript": "^5.5.4"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "module-league-state",
+  "version": "4.16.1",
+  "description": "Module that provides state integration for League of Legends games",
+  "author": "RCVolus",
+  "license": "MIT",
+  "toolkit": {
+    "modes": [
+      "PLUGIN"
+    ],
+    "plugin": {
+      "main": "dist/plugin.js"
+    },
+    "toolkitVersion": ">=1.8",
+    "needsBuild": true,
+    "dependencies": [
+      "module-league-static"
+    ]
+  },
+  "dependencies": {
+    "typescript": "^5.5.4",
+    "@rcv-prod-toolkit/types": "github:rcv-prod-toolkit/types"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "plugin-webapi",
+  "version": "2.3.3",
+  "description": "Module to fetch match data from the public League of Legends REST-Api",
+  "author": "RCVolus",
+  "license": "MIT",
+  "toolkit": {
+    "modes": [
+      "PLUGIN"
+    ],
+    "plugin": {
+      "main": "dist/plugin.js"
+    },
+    "toolkitVersion": ">=1.8",
+    "needsBuild": true
+  },
+  "dependencies": {
+    "twisted": "^1.65.0"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@rcv-prod-toolkit/types": "github:rcv-prod-toolkit/types",
+    "typescript": "^5.8.2"
+  }
+}

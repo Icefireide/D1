@@ -1,0 +1,27 @@
+{
+    "name": "module-teams",
+    "version": "4.4.0",
+    "description": "Module that provides GFX elements for the current teams",
+    "author": "RCVolus",
+    "license": "MIT",
+    "toolkit": {
+        "modes": [
+            "PLUGIN"
+        ],
+        "plugin": {
+            "main": "dist/plugin.js"
+        },
+        "toolkitVersion": ">=1.11",
+        "needsBuild": true
+    },
+    "dependencies": {
+        "dayjs": "^1.11.13"
+    },
+    "devDependencies": {
+        "@rcv-prod-toolkit/types": "github:rcv-prod-toolkit/types",
+        "typescript": "^5.5.4"
+    },
+    "scripts": {
+        "build": "tsc"
+    }
+}

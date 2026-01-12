@@ -1,0 +1,23 @@
+{
+  "name": "module-valorant-state",
+  "version": "1.7.12",
+  "description": "Module that provides state integration for Valorant games",
+  "author": "RCVolus",
+  "license": "MIT",
+  "toolkit": {
+    "modes": [
+      "PLUGIN"
+    ],
+    "plugin": {
+      "main": "dist/plugin.js"
+    },
+    "needsBuild": true
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "@rcv-prod-toolkit/types": "github:rcv-prod-toolkit/types"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}

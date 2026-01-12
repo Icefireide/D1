@@ -1,0 +1,181 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const ValoState_1 = require("./controller/ValoState");
+const Valo_Champselect_data_json_1 = __importDefault(require("./data/Valo-Champselect-data.json"));
+const Post_Game_data_json_1 = __importDefault(require("./data/Post-Game-data.json"));
+module.exports = async (ctx) => {
+    const namespace = ctx.plugin.module.getName();
+    // Register new UI page
+    ctx.LPTE.emit({
+        meta: {
+            type: 'add-pages',
+            namespace: 'ui',
+            version: 1
+        },
+        pages: [
+            {
+                name: 'Valo: Game State',
+                frontend: 'frontend',
+                id: `op-${namespace}`
+            }
+        ]
+    });
+    const state = new ValoState_1.ValoState(ctx);
+    // Answer requests to get state
+    ctx.LPTE.on(namespace, 'request', (e) => {
+        ctx.LPTE.emit({
+            meta: {
+                namespace: 'reply',
+                type: e.meta.reply,
+                version: 1
+            },
+            state: state.getState()
+        });
+    });
+    ctx.LPTE.on(namespace, 'set-mvp', (e) => {
+        var _a;
+        const currentState = state.getState();
+        if (!currentState.postGame._available)
+            return;
+        const player = (_a = currentState.postGame.players) === null || _a === void 0 ? void 0 : _a.find((p) => p.subject === e.subject);
+        state.mvp = player;
+        ctx.LPTE.emit({
+            meta: {
+                type: 'update',
+                namespace: 'valorant-state-mvp',
+                version: 1
+            },
+            mvp: player
+        });
+    });
+    ctx.LPTE.on(namespace, 'set-round', (e) => {
+        state.gameSets[e.round] = state.getState();
+        ctx.LPTE.emit({
+            meta: {
+                type: 'update',
+                namespace: 'valorant-state-rounds',
+                version: 1
+            },
+            rounds: state.gameSets
+        });
+    });
+    ctx.LPTE.on(namespace, 'clear-round', (e) => {
+        state.gameSets = {};
+        ctx.LPTE.emit({
+            meta: {
+                type: 'update',
+                namespace: 'valorant-state-rounds',
+                version: 1
+            },
+            rounds: state.gameSets
+        });
+    });
+    ctx.LPTE.on(namespace, 'get-rounds', (e) => {
+        ctx.LPTE.emit({
+            meta: {
+                namespace: 'reply',
+                type: e.meta.reply,
+                version: 1
+            },
+            rounds: state.gameSets
+        });
+    });
+    ctx.LPTE.on('valo', 'valo-pre-game-create', (e) => {
+        state.sessionLoopState = e.state;
+        state.matchInfo.init(e.data);
+        state.preGame.init(e.data);
+        state.postGame.delete();
+        state.mvp = undefined;
+        ctx.LPTE.emit({
+            meta: {
+                type: 'create',
+                namespace: 'valorant-state-pre-game',
+                version: 1
+            },
+            state: state.getState()
+        });
+    });
+    ctx.LPTE.on('valo', 'valo-pre-game-update', (e) => {
+        state.preGame.update(e.data);
+        ctx.LPTE.emit({
+            meta: {
+                type: 'update',
+                namespace: 'valorant-state-pre-game',
+                version: 1
+            },
+            state: state.getState()
+        });
+    });
+    ctx.LPTE.on('valo', 'valo-pre-game-delete', (e) => {
+        state.preGame.delete(e.data);
+        state.matchInfo.updateTeam(e.data.Teams);
+        ctx.LPTE.emit({
+            meta: {
+                type: 'delete',
+                namespace: 'valorant-state-pre-game',
+                version: 1
+            },
+            state: state.getState()
+        });
+    });
+    ctx.LPTE.on('valo', 'valo-game-create', (e) => {
+        state.sessionLoopState = e.state;
+        ctx.LPTE.emit({
+            meta: {
+                type: 'create',
+                namespace: 'valorant-state-game',
+                version: 1
+            },
+            state: state.getState()
+        });
+    });
+    ctx.LPTE.on('valo', 'valo-post-game-create', (e) => {
+        state.sessionLoopState = e.state;
+        state.postGame.init(e.data);
+        ctx.LPTE.emit({
+            meta: {
+                type: 'create',
+                namespace: 'valorant-state-post-game',
+                version: 1
+            },
+            state: state.getState()
+        });
+    });
+    // Emit event that we're ready to operate
+    ctx.LPTE.emit({
+        meta: {
+            type: 'plugin-status-change',
+            namespace: 'lpt',
+            version: 1
+        },
+        status: 'RUNNING'
+    });
+    ctx.LPTE.on(namespace, 'run-test', (e) => {
+        state.matchInfo.init(Valo_Champselect_data_json_1.default[0]);
+        state.preGame.init(Valo_Champselect_data_json_1.default[0]);
+        for (let i = 1; i < Valo_Champselect_data_json_1.default.length; i++) {
+            setTimeout(() => {
+                ctx.LPTE.emit({
+                    meta: {
+                        namespace: 'valo',
+                        type: 'valo-pre-game-update',
+                        version: 1
+                    },
+                    data: Valo_Champselect_data_json_1.default[i]
+                });
+            }, i * 1000);
+        }
+        ctx.LPTE.emit({
+            meta: {
+                namespace: 'valo',
+                type: 'valo-post-game-create',
+                version: 1
+            },
+            data: Post_Game_data_json_1.default
+        });
+    });
+};
+//# sourceMappingURL=plugin.js.map

@@ -1,0 +1,46 @@
+.op-module-league-state .status {
+  font-weight: bold;
+}
+
+.op-module-league-state tr.collapse td {
+  padding-bottom: 20px;
+}
+
+.op-module-league-state .collapse {
+  border: none;
+}
+
+/* disable animation because we're not fancy */
+.op-module-league-state .collapsing {
+  -webkit-transition: none;
+  transition: none;
+  display: none;
+}
+
+.op-module-league-state .green {
+  color: green;
+}
+.op-module-league-state .orange {
+  color: orange;
+}
+
+#participant-table {
+  display: flex;
+  gap: 2rem;
+}
+
+.slist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* (B) DRAG-AND-DROP HINT */
+.slist li.hint {
+  border: 1px solid #ffc49a;
+  background: #feffb4;
+}
+.slist li.active {
+  border: 1px solid #ffa5a5;
+  background: #ffe7e7;
+}

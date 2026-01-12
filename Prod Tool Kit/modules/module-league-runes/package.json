@@ -1,0 +1,20 @@
+{
+  "name": "module-league-runes",
+  "version": "1.5.2",
+  "description": "Module that provides GFX elements for runes (reforged) League of Legends games",
+  "author": "RCVolus",
+  "license": "MIT",
+  "toolkit": {
+    "modes": [
+      "PLUGIN"
+    ],
+    "plugin": {
+      "main": "plugin.js"
+    },
+    "toolkitVersion": ">=1.11",
+    "dependencies": [
+      "module-league-state",
+      "module-league-static"
+    ]
+  }
+}

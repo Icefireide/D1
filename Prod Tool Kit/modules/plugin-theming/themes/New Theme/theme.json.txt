@@ -1,0 +1,5 @@
+{
+  "name": "RCV Theme",
+  "author": "RCVolus",
+  "version": "1.0"
+}

@@ -1070,3 +1070,51 @@ Require stack:
 2026-01-28T22:45:24.632Z [info] server: Listening for requests on http://localhost:3003
 2026-01-28T22:45:30.862Z [info] plugin-webapi: Fetching match data for matchid=NA1_5297969351
 2026-01-28T22:45:31.385Z [info] plugin-webapi: Fetched match for matchId=NA1_5297969351, gameId=5297969351
+2026-01-31T00:38:57.230Z [info] main:  _          _       _____           _ _    _ _   
+2026-01-31T00:38:57.233Z [info] main: | |    ___ | |     |_   _|__   ___ | | | _(_) |_ 
+2026-01-31T00:38:57.234Z [info] main: | |   / _ \| |       | |/ _ \ / _ \| | |/ / | __|
+2026-01-31T00:38:57.234Z [info] main: | |__| (_) | |___    | | (_) | (_) | |   <| | |_ 
+2026-01-31T00:38:57.234Z [info] main: |_____\___/|_____|   |_|\___/ \___/|_|_|\_\_|\__|
+2026-01-31T00:38:57.234Z [info] main: 
+2026-01-31T00:38:57.675Z [info] main: ==================================================
+2026-01-31T00:38:57.676Z [info] lpte-svc: Initialized event bus.
+2026-01-31T00:38:57.677Z [info] module-svc: Initializing module service.
+2026-01-31T00:38:57.676Z [info] main: There is a new version available: v1.13.5
+2026-01-31T00:38:57.676Z [info] main: ==================================================
+2026-01-31T00:38:57.676Z [info] main: 
+2026-01-31T00:38:59.656Z [info] module-svc: Initialized 19 module(s). Now loading plugins.
+2026-01-31T00:39:00.728Z [info] main: LoL Toolkit started up successfully.
+2026-01-31T00:38:59.657Z [info] module-svc: Loaded 19 plugin(s).
+2026-01-31T00:39:00.730Z [info] module-svc: Plugin status changed: plugin=plugin-prod-clock, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:00.730Z [info] module-svc: Plugin status changed: plugin=plugin-database, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:00.731Z [info] module-svc: Plugin status changed: plugin=plugin-config, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:00.731Z [info] module-svc: Plugin status changed: plugin=module-valorant-state, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:00.731Z [info] module-svc: Plugin status changed: plugin=module-valorant-pregame, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:00.733Z [info] module-svc: Plugin status changed: plugin=module-league-runes, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:00.734Z [info] module-svc: Plugin status changed: plugin=module-league-prm, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:00.735Z [info] module-svc: Plugin status changed: plugin=module-league-fearless, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:00.736Z [info] module-svc: Plugin status changed: plugin=module-league-end-of-game, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:00.736Z [info] module-svc: Plugin status changed: plugin=module-league-champselect-ui, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:00.736Z [info] module-svc: Plugin status changed: plugin=module-league-caster-cockpit, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:00.737Z [info] module-svc: Plugin status changed: plugin=module-caster, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:00.748Z [info] module-svc: Plugin status changed: plugin=plugin-webapi, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:00.748Z [info] module-svc: Plugin status changed: plugin=module-league-state, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:00.749Z [info] module-svc: Plugin status changed: plugin=module-league-in-game, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:00.750Z [info] module-svc: Plugin status changed: plugin=plugin-theming, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:00.751Z [info] module-svc: Plugin status changed: plugin=module-teams, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:00.753Z [warn] plugin-theming: Failed to load theme in C:\Users\Nicholas\Documents\GitHub\D1\Prod Tool Kit\modules\plugin-theming\themes\New Theme Cannot find module 'C:\Users\Nicholas\Documents\GitHub\D1\Prod Tool Kit\modules\plugin-theming\themes\New Theme\theme.json'
+Require stack:
+- C:\Users\Nicholas\Documents\GitHub\D1\Prod Tool Kit\modules\plugin-theming\dist\plugin.js
+- C:\Users\Nicholas\Documents\GitHub\D1\Prod Tool Kit\dist\core\modules\Module.js
+- C:\Users\Nicholas\Documents\GitHub\D1\Prod Tool Kit\dist\core\modules\ModuleService.js
+- C:\Users\Nicholas\Documents\GitHub\D1\Prod Tool Kit\dist\core\web\controller\modules.js
+- C:\Users\Nicholas\Documents\GitHub\D1\Prod Tool Kit\dist\core\web\controller\index.js
+- C:\Users\Nicholas\Documents\GitHub\D1\Prod Tool Kit\dist\core\web\server.js
+- C:\Users\Nicholas\Documents\GitHub\D1\Prod Tool Kit\dist\core\app.js
+2026-01-31T00:39:01.053Z [info] module-svc: Plugin status changed: plugin=module-league-static, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:01.123Z [info] module-svc: Plugin status changed: plugin=module-valorant-static, old=UNAVAILABLE, new=RUNNING
+2026-01-31T00:39:01.284Z [info] server: Listening for requests on http://localhost:3003
+2026-01-31T00:39:16.999Z [info] plugin-webapi: Fetching match data for matchid=NA1_5479271483
+2026-01-31T00:39:17.400Z [info] plugin-webapi: Fetched match for matchId=NA1_5479271483, gameId=5479271483
+2026-01-31T01:16:43.548Z [info] plugin-webapi: Fetching match data for matchid=NA1_5479309305
+2026-01-31T01:16:43.890Z [info] plugin-webapi: Fetched match for matchId=NA1_5479309305, gameId=5479309305

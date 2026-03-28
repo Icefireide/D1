@@ -1,0 +1,704 @@
+/*
+ * ================================================================
+ *  DIVISION ONE — BlueBottle Broadcast CSS Theme
+ *  Version 3.0  |  /ingame/ overlay
+ *
+ *  PALETTE
+ *  -------
+ *  Black         #000000
+ *  Charcoal      #28261F   (#161514 darkest)
+ *  Champion Gold #E9CF8F   (accent / timer / series dots)
+ *  Gold Dark     #7F5F10   (rule line edges)
+ *  Gold Mid      #B0934B   (series dot border)
+ *  Blue team     #00A2E8   (preserved from game)
+ *  Red team      #D13837   (preserved from game)
+ *
+ *  FONTS
+ *  -----
+ *  Barlow Condensed 600/700/800  (Google Fonts, free Tungsten stand-in)
+ *  Rajdhani 500/600/700          (Google Fonts, UI labels)
+ *  Drop your @font-face blocks above this file if you own
+ *  Tungsten Bold / COBE ExtraBold and update --font-head / --font-body.
+ *
+ *  INSTALL
+ *  -------
+ *  Paste into BlueBottle → Settings → Custom CSS
+ *  (or reference as a file path if BlueBottle supports file linking).
+ *  All rules use !important to beat BlueBottle's inline styles.
+ * ================================================================
+ */
+
+/* ── Google Fonts ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Rajdhani:wght@500;600;700&display=swap');
+
+/* ── Design tokens ────────────────────────────────────────── */
+:root {
+  --d1-black:        #000000;
+  --d1-b7:           #161514;
+  --d1-b6:           #2A281B;
+  --d1-b5:           #3C3B38;
+  --d1-b4:           #616056;
+  --d1-charcoal:     #28261F;
+  --d1-white:        #ffffff;
+  --d1-crown:        #E9CF8F;
+  --d1-crown-mid:    #B0934B;
+  --d1-crown-dark:   #7F5F10;
+  --d1-blue:         #00A2E8;
+  --d1-red:          #D13837;
+  --d1-border:       rgba(233,207,143,.20);
+  --d1-divider:      rgba(255,255,255,.06);
+  --font-head:       'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+  --font-body:       'Rajdhani', Arial, sans-serif;
+}
+
+
+/* ================================================================
+   GLOBAL — override Arial everywhere BlueBottle inlines it
+   ================================================================ */
+
+[style*="font-family: Arial"] {
+  font-family: var(--font-head) !important;
+}
+[style*="font-weight: 700"],
+[style*="font-weight: bold"] {
+  font-family: var(--font-head) !important;
+}
+[style*="font-weight: 100"],
+[style*="font-weight: 400"] {
+  font-family: var(--font-body) !important;
+}
+
+
+/* ================================================================
+   1. TOP SCOREBOARD BAR  (#top-row / .scoreboard-top-row)
+   ================================================================ */
+
+#top-row,
+.scoreboard-top-row {
+  background: var(--d1-black) !important;
+  border-bottom: 2px solid var(--d1-crown-dark) !important;
+  position: relative !important;
+  height: 56px !important;
+}
+
+/* Gold shimmer rule at bottom edge of top bar */
+#top-row::after,
+.scoreboard-top-row::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--d1-crown-dark) 8%,
+    var(--d1-crown) 50%,
+    var(--d1-crown-dark) 92%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 20;
+}
+
+
+/* ── 1a. TEAM PILL  (name + seed + series dots) ─────────── */
+
+/* Blue pill — shears right with notched top-right corner */
+.team-container.blue-team {
+  background: var(--d1-black) !important;
+  clip-path: polygon(
+    0% 0%,
+    calc(100% - 10px) 0%,
+    100% 10px,
+    100% 100%,
+    0% 100%
+  ) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding: 0 18px 0 12px !important;
+  gap: 4px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Red pill — mirrors, notched top-left */
+.team-container.red-team {
+  background: var(--d1-black) !important;
+  clip-path: polygon(
+    10px 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%,
+    0% 10px
+  ) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding: 0 12px 0 18px !important;
+  gap: 4px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Team icon */
+.team-icon-container {
+  width: 28px !important;
+  height: 28px !important;
+  background: var(--d1-b7) !important;
+  border: 1px solid var(--d1-border) !important;
+  padding: 3px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Team name text */
+[data-v-27b11a96] .flex.flex-col.justify-center p:first-child {
+  font-family: var(--font-head) !important;
+  font-weight: 800 !important;
+  font-size: 1.15rem !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  color: var(--d1-white) !important;
+  line-height: 1 !important;
+}
+
+/* Seed / record line */
+[data-v-27b11a96] .flex.flex-col.justify-center p:not(:first-child) {
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  font-size: .6rem !important;
+  letter-spacing: .07em !important;
+  color: rgba(255,255,255,.38) !important;
+  line-height: 1 !important;
+}
+
+/* Slim colour bars beside logo */
+[data-v-27b11a96] > .flex > .flex.flex-col.justify-center > div {
+  width: 3px !important;
+  border-radius: 0 !important;
+}
+
+/* ── Series dots ──────────────────────────────────────────── */
+/*
+ * BlueBottle doesn't natively render per-team series dots.
+ * These styles target the .center-logo area and inject dots
+ * via a CSS-only approach. If your version of BlueBottle
+ * exposes series state in a separate element, target it here.
+ * The dot styling below is available as utility classes
+ * .d1-dot and .d1-dot--won that you can add in custom HTML
+ * widget overlays alongside the main ingame page.
+ */
+.d1-series-dots {
+  display: flex !important;
+  gap: 3px !important;
+  align-items: center !important;
+}
+.d1-dot {
+  width: 7px !important;
+  height: 7px !important;
+  transform: rotate(45deg) !important;
+  background: #222 !important;
+  border: 1px solid #333 !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+}
+.d1-dot--won {
+  background: var(--d1-crown) !important;
+  border-color: var(--d1-crown-mid) !important;
+}
+
+
+/* ── 1b. SCORE PANELS  (.team-scores-container) ─────────── */
+
+.team-scores-container {
+  background: #111111 !important;
+  border: none !important;
+  height: 100% !important;
+}
+
+/* Blue score panel — parallelogram shears inward (right edge diagonal) */
+.blue-team .team-scores-container,
+.blue-team ~ .team-scores-container,
+[data-v-13bd9c87] .blue-team + .team-scores-container {
+  clip-path: polygon(
+    0% 0%,
+    calc(100% - 18px) 0%,
+    100% 100%,
+    0% 100%
+  ) !important;
+  padding-right: 28px !important;
+}
+
+/* Red score panel — mirrors */
+.red-team .team-scores-container,
+.red-team ~ .team-scores-container {
+  clip-path: polygon(
+    18px 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%
+  ) !important;
+  padding-left: 28px !important;
+}
+
+/* Kill count */
+.score-item.kills p {
+  font-family: var(--font-head) !important;
+  font-weight: 800 !important;
+  font-size: 2.1rem !important;
+  letter-spacing: .02em !important;
+  line-height: 1 !important;
+}
+
+/* Gold / tower stat numbers */
+.score-item p,
+.score-item .flex p {
+  font-family: var(--font-head) !important;
+  font-weight: 700 !important;
+}
+
+/* Gold lead pill */
+.score-item > .absolute,
+.score-item .absolute {
+  font-family: var(--font-body) !important;
+  font-weight: 700 !important;
+  font-size: .62rem !important;
+  letter-spacing: .08em !important;
+  border-radius: 0 !important;
+}
+
+
+/* ── 1c. CENTER LOGO + CLOCK ─────────────────────────────── */
+
+.center-logo {
+  background: var(--d1-black) !important;
+  border-left: 1px solid var(--d1-border) !important;
+  border-right: 1px solid var(--d1-border) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 2px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Timer */
+#bot-row .absolute-center p,
+.game-timer .absolute-center p,
+.center-container .absolute-center p {
+  font-family: var(--font-head) !important;
+  font-weight: 800 !important;
+  font-size: 1.45rem !important;
+  letter-spacing: .12em !important;
+  color: var(--d1-crown) !important;
+  line-height: 1 !important;
+}
+
+/* Center gradient strips (objectives row) */
+#bot-row .absolute-center {
+  background: linear-gradient(
+    180deg,
+    var(--d1-b7) 0%,
+    var(--d1-b7) 55%,
+    transparent 100%
+  ) !important;
+}
+
+
+/* ── 1d. BARON / OBJECTIVE BUFF TIMER ────────────────────── */
+
+[data-v-911c0fc5].child {
+  background: var(--d1-b6) !important;
+  border: 1px solid var(--d1-border) !important;
+  border-radius: 0 !important;
+}
+[data-v-911c0fc5] p {
+  font-family: var(--font-head) !important;
+  font-weight: 700 !important;
+  letter-spacing: .06em !important;
+}
+
+
+/* ================================================================
+   2. OBJECTIVES / BOT ROW  (#bot-row)
+   ================================================================ */
+
+#bot-row {
+  background: transparent !important;
+}
+
+/* Blue-side gradient strip */
+#bot-row .flex.flex-row.justify-end > div {
+  background: linear-gradient(
+    180deg, var(--d1-b7) 0%, transparent 100%
+  ) !important;
+  clip-path: polygon(
+    0% 0%, calc(100% - 10px) 0%, 100% 100%, 0% 100%
+  ) !important;
+}
+
+/* Red-side gradient strip */
+#bot-row .flex.flex-row.justify-start > div {
+  background: linear-gradient(
+    180deg, var(--d1-b7) 0%, transparent 100%
+  ) !important;
+  clip-path: polygon(
+    10px 0%, 100% 0%, 100% 100%, 0% 100%
+  ) !important;
+}
+
+/* Stat text in bot row */
+#bot-row p {
+  font-family: var(--font-head) !important;
+  font-weight: 700 !important;
+  font-size: .65rem !important;
+  letter-spacing: .05em !important;
+  color: rgba(255,255,255,.55) !important;
+}
+
+
+/* ================================================================
+   3. PLAYER PANEL  (lower scoreboard rows)
+   ================================================================ */
+
+/* Outer wrapper */
+[data-v-ea929d6e] > .flex.flex-col.absolute,
+[style*="23.2%"] {
+  background: rgba(0,0,0,.97) !important;
+  border-top: 2px solid var(--d1-crown-dark) !important;
+}
+
+/* Team section dividers */
+[data-v-ea929d6e] .flex.flex-col.absolute::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: var(--d1-border);
+  margin: 4px 0;
+}
+
+
+/* ── 3a. CHAMPION TILE  (.champion-grid) ─────────────────── */
+
+.champion-grid {
+  background: var(--d1-b7) !important;
+  outline: 1px solid rgba(255,255,255,.07) !important;
+  height: 5rem !important;
+  width: 5rem !important;
+}
+
+/* Player name label above tile */
+.champion-grid > p.absolute {
+  font-family: var(--font-body) !important;
+  font-weight: 700 !important;
+  font-size: .6rem !important;
+  letter-spacing: .06em !important;
+  text-transform: uppercase !important;
+  color: var(--d1-crown) !important;
+  background: rgba(0,0,0,.78) !important;
+  padding: 1px 4px !important;
+  line-height: 1.3 !important;
+}
+
+/* Level number (bottom-left of tile) */
+.champion > p.text-outlined,
+.champion > p.absolute.bottom-0 {
+  font-family: var(--font-head) !important;
+  font-weight: 800 !important;
+  font-size: 1rem !important;
+  line-height: 1 !important;
+}
+
+/* CS label (top-left of tile) */
+.champion > p.strokeme {
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  font-size: .6rem !important;
+  color: rgba(255,255,255,.7) !important;
+}
+
+/* Dead player respawn countdown */
+.champion > .absolute.bottom-0.left-0.w-full.h-full p {
+  font-family: var(--font-head) !important;
+  font-weight: 800 !important;
+  font-size: 2rem !important;
+  color: #ff4444 !important;
+}
+
+/* Health bar gap */
+.health {
+  gap: 1px !important;
+}
+
+/* Dead player greyout */
+.gray-filter {
+  filter: grayscale(1) brightness(.55) !important;
+}
+
+
+/* ── 3b. SUMMONER SPELLS / RUNE ──────────────────────────── */
+
+/* Spell cooldown ring accent */
+.timer-fill {
+  border-color: rgba(233,207,143,.4) !important;
+}
+
+/* Spell icon wrapper */
+.summoner-one,
+.summoner-two,
+.rune-one {
+  outline: 1px solid rgba(255,255,255,.09) !important;
+}
+
+
+/* ── 3c. ITEM SLOTS ──────────────────────────────────────── */
+
+[data-v-ab7a46fb].c {
+  border-radius: 1px !important;
+}
+[data-v-ab7a46fb] .b {
+  border-radius: 1px !important;
+  outline: 1px solid rgba(255,255,255,.09) !important;
+}
+
+/* Vision score overlay on ward */
+.vision-score {
+  font-family: var(--font-body) !important;
+  font-weight: 700 !important;
+  font-size: 1em !important;
+  color: var(--d1-crown) !important;
+  text-shadow: 0 0 4px rgba(0,0,0,.9) !important;
+}
+
+/* Item cooldown text */
+[data-v-ab7a46fb] .text {
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+}
+
+
+/* ── 3d. PLAYER INFO (name, KDA, stats) ──────────────────── */
+
+/* Champion splash */
+.left__icon,
+.right__icon {
+  opacity: .82 !important;
+  filter: contrast(1.05) saturate(.88) !important;
+}
+
+/* CS number */
+[data-v-18b909a2] > .absolute.flex.flex-col p {
+  font-family: var(--font-head) !important;
+  font-weight: 800 !important;
+  font-size: 1.2rem !important;
+  color: var(--d1-white) !important;
+}
+
+/* KDA */
+.left__kda p,
+.right__kda p {
+  font-family: var(--font-head) !important;
+  font-weight: 700 !important;
+  letter-spacing: .04em !important;
+}
+
+/* Gold diff center column */
+[data-v-08b78d0a] p {
+  font-family: var(--font-head) !important;
+  font-weight: 800 !important;
+  font-size: 1.1rem !important;
+  letter-spacing: .05em !important;
+}
+
+/* Arrow icons in gold diff column */
+[data-v-08b78d0a] svg path {
+  fill: var(--d1-crown-mid) !important;
+}
+
+/* Team colour bar at bottom of gold diff cell */
+.color-transition {
+  height: 3px !important;
+  opacity: .85 !important;
+}
+
+/* Each player row background */
+[data-v-18b909a2].relative.h-full.w-full {
+  background: var(--d1-b7) !important;
+  border-bottom: 1px solid rgba(255,255,255,.05) !important;
+}
+
+
+/* ================================================================
+   4. INHIBITOR TRACKER  (#inhibitors)
+   ================================================================ */
+
+#inhibitors > div > div {
+  background: var(--d1-b7) !important;
+  border-right: 2px solid var(--d1-crown-dark) !important;
+}
+
+/* "BLUE" / "RED" label */
+#inhibitors p.text-center {
+  font-family: var(--font-head) !important;
+  font-weight: 800 !important;
+  font-size: 1.55rem !important;
+  letter-spacing: .08em !important;
+}
+
+/* Inhibitor timer text */
+[data-v-6aac4308] p {
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  font-size: .72rem !important;
+  color: rgba(255,255,255,.65) !important;
+}
+
+/* Progress bar track */
+[data-v-6aac4308] .h-full.relative {
+  background: rgba(255,255,255,.08) !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+/* Progress bar fill */
+[data-v-6aac4308] .h-full.transition-all {
+  border-radius: 0 !important;
+}
+
+
+/* ================================================================
+   5. OBJECTIVE ICON STRIPS  (grub / dragon top corners)
+   ================================================================ */
+
+[data-v-0689740b] img {
+  background: var(--d1-b7) !important;
+  padding: 8px !important;
+}
+
+[data-v-0689740b] .flex.justify-center.items-center {
+  background: var(--d1-b7) !important;
+  border-left: 1px solid var(--d1-border) !important;
+}
+
+
+/* ================================================================
+   6. SHAPE UTILITIES  (reusable clip-paths)
+   ================================================================ */
+
+/*
+ * Apply these classes to any custom HTML elements you add
+ * alongside BlueBottle overlays.
+ */
+
+/* Parallelogram — left panel, diagonal right edge */
+.d1-skew-right {
+  clip-path: polygon(
+    0% 0%, calc(100% - 16px) 0%, 100% 100%, 0% 100%
+  ) !important;
+}
+
+/* Parallelogram — right panel, diagonal left edge */
+.d1-skew-left {
+  clip-path: polygon(
+    16px 0%, 100% 0%, 100% 100%, 0% 100%
+  ) !important;
+}
+
+/* Notched top-right corner */
+.d1-notch-tr {
+  clip-path: polygon(
+    0% 0%, calc(100% - 12px) 0%, 100% 12px, 100% 100%, 0% 100%
+  ) !important;
+}
+
+/* Notched top-left corner */
+.d1-notch-tl {
+  clip-path: polygon(
+    12px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 12px
+  ) !important;
+}
+
+
+/* ================================================================
+   7. GOLD ACCENT DETAILS
+   ================================================================ */
+
+/* Thin gold rule (reusable element) */
+.d1-gold-rule {
+  height: 2px !important;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--d1-crown-dark) 8%,
+    var(--d1-crown) 50%,
+    var(--d1-crown-dark) 92%,
+    transparent
+  ) !important;
+  border: none !important;
+  opacity: .72 !important;
+}
+
+/* Four-point star accent */
+.d1-star::before {
+  content: '✦' !important;
+  color: var(--d1-crown) !important;
+  font-size: .8em !important;
+  line-height: 1 !important;
+}
+
+/* Forward chevron accent */
+.d1-chevron::before {
+  content: '❯❯' !important;
+  color: var(--d1-crown-mid) !important;
+  font-size: .75em !important;
+  letter-spacing: -.1em !important;
+}
+
+
+/* ================================================================
+   8. ANIMATIONS
+   ================================================================ */
+
+/* Score update flash */
+@keyframes d1-score-flash {
+  0%   { color: var(--d1-crown); }
+  50%  { color: var(--d1-white); }
+  100% { color: var(--d1-crown); }
+}
+.d1-score-updated {
+  animation: d1-score-flash .5s ease-in-out !important;
+}
+
+/* Panel slide-in (apply to lower scoreboard on show) */
+@keyframes d1-slide-up {
+  from { transform: translateY(8px); opacity: 0; }
+  to   { transform: translateY(0);   opacity: 1; }
+}
+.d1-slide-up {
+  animation: d1-slide-up .35s cubic-bezier(.16,1,.3,1) both !important;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+
+/* ================================================================
+   9. BROADCAST OVERLAY HELPERS
+   ================================================================ */
+
+/* Transparent root for OBS browser source */
+.bb-overlay-root,
+#app {
+  background: transparent !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar              { width: 4px; }
+::-webkit-scrollbar-track        { background: var(--d1-b7); }
+::-webkit-scrollbar-thumb        { background: var(--d1-b4); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover  { background: var(--d1-crown-mid); }
